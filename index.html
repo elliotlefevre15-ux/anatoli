@@ -3,241 +3,234 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Anatoli — Maricá, Brazil</title>
+<title>Anatoli — Premium Real Estate Developer Brazil</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
 :root{
+  --black:#080807;
+  --dark:#0F0E0C;
+  --dark2:#161513;
   --white:#FFFFFF;
-  --cream:#FAF7F2;
-  --cream2:#F2EDE4;
-  --sand:#E8DDD0;
-  --warm:#C4956A;
-  --red:#C0392B;
-  --red2:#A93226;
-  --wood:#B5845A;
-  --green:#2D6A4F;
-  --sky:#4A90B8;
-  --txt:#2C2118;
-  --txt2:#6B5744;
-  --txt3:#9E8878;
-  --ln:#DDD0C0;
+  --cream:#F5F0E8;
+  --cream2:#EDE8DF;
+  --sand:#D4C9B8;
+  --warm:#B8935A;
+  --warm2:#D4A96A;
+  --txt:#1A1814;
+  --txt2:#5C5448;
+  --txt3:#8A8070;
+  --ln:#2A2720;
+  --ln-light:#DDD5C8;
 }
 html{scroll-behavior:smooth;}
-body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--txt);overflow-x:hidden;line-height:1.7;font-size:15px;}
-::-webkit-scrollbar{width:4px;}::-webkit-scrollbar-thumb{background:var(--warm);}
+body{font-family:'Jost',sans-serif;background:var(--black);color:var(--cream);overflow-x:hidden;line-height:1.7;font-size:15px;}
+::-webkit-scrollbar{width:3px;}::-webkit-scrollbar-thumb{background:var(--warm);}
 img{display:block;width:100%;height:100%;object-fit:cover;}
 
-/* HEADER */
-header{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:0 60px;height:72px;background:rgba(250,247,242,0.96);backdrop-filter:blur(16px);border-bottom:1px solid var(--ln);transition:all .3s;}
-header.scrolled{box-shadow:0 2px 24px rgba(44,33,24,.08);}
-.logo{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;letter-spacing:.18em;color:var(--txt);text-decoration:none;}
-.logo span{color:var(--red);}
-nav{display:flex;align-items:center;gap:32px;}
-nav a{color:var(--txt2);font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;transition:color .2s;position:relative;}
-nav a::after{content:'';position:absolute;bottom:-3px;left:0;width:0;height:1px;background:var(--warm);transition:width .25s;}
-nav a:hover{color:var(--txt);}
-nav a:hover::after{width:100%;}
-.lang-sw{display:flex;gap:6px;margin-left:16px;}
-.lang-btn{background:none;border:none;cursor:pointer;font-size:22px;opacity:.4;transition:opacity .2s;padding:0;line-height:1;}
+/* NAV */
+header{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:0 64px;height:76px;transition:all .4s;}
+header.scrolled{background:rgba(8,8,7,.95);backdrop-filter:blur(20px);border-bottom:1px solid var(--ln);}
+.logo{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:400;letter-spacing:.32em;color:var(--white);text-decoration:none;text-transform:uppercase;}
+.logo span{color:var(--warm);}
+nav{display:flex;align-items:center;gap:36px;}
+nav a{color:rgba(245,240,232,.55);font-size:10px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;transition:color .2s;}
+nav a:hover{color:var(--white);}
+.nav-cta{background:var(--warm);color:var(--black) !important;padding:10px 24px;font-size:10px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;transition:background .2s;}
+.nav-cta:hover{background:var(--warm2) !important;}
+.lang-sw{display:flex;gap:4px;margin-left:8px;}
+.lang-btn{background:none;border:none;cursor:pointer;font-size:20px;opacity:.35;transition:opacity .2s;padding:0;line-height:1;}
 .lang-btn.on{opacity:1;}
-.lang-btn:hover{opacity:.8;}
+.lang-btn:hover{opacity:.75;}
 
 /* HERO */
-.hero{position:relative;height:100vh;min-height:640px;display:flex;align-items:center;justify-content:center;overflow:hidden;}
+.hero{position:relative;height:100vh;min-height:700px;display:flex;align-items:flex-end;overflow:hidden;}
 .hero-bg{position:absolute;inset:0;}
-.hero-bg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 60%;}
-.hero-ov{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(250,247,242,.08) 0%,rgba(250,247,242,.05) 35%,rgba(250,247,242,.6) 75%,rgba(250,247,242,1) 100%);}
-.hero-content{position:relative;z-index:2;text-align:center;padding:0 24px;max-width:900px;}
-.hero-pill{display:inline-block;background:var(--red);color:#fff;font-size:9px;font-weight:600;letter-spacing:.28em;text-transform:uppercase;padding:7px 22px;margin-bottom:32px;opacity:0;animation:fadeUp .8s .3s forwards;}
-.hero-title{font-family:'Playfair Display',serif;font-size:clamp(52px,9vw,108px);font-weight:400;color:var(--txt);line-height:.95;letter-spacing:.04em;opacity:0;animation:fadeUp .9s .5s forwards;}
-.hero-title em{font-style:italic;color:var(--warm);}
-.hero-sub{font-size:clamp(15px,1.6vw,18px);color:var(--txt2);font-weight:300;margin:22px 0 40px;opacity:0;animation:fadeUp .9s .7s forwards;}
-.hero-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;opacity:0;animation:fadeUp .9s .9s forwards;}
-.btn-primary{display:inline-flex;align-items:center;gap:10px;background:var(--red);color:#fff;font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;padding:15px 36px;text-decoration:none;transition:all .25s;border:2px solid var(--red);}
-.btn-primary:hover{background:var(--red2);border-color:var(--red2);}
-.btn-outline{display:inline-flex;align-items:center;gap:10px;border:2px solid var(--txt);color:var(--txt);font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;padding:15px 36px;text-decoration:none;transition:all .25s;}
-.btn-outline:hover{background:var(--txt);color:var(--cream);}
-.scroll-hint{position:absolute;bottom:32px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;opacity:0;animation:fadeUp .8s 1.2s forwards;}
-.scroll-hint span{font-size:8px;letter-spacing:.3em;text-transform:uppercase;color:var(--txt3);}
-.scroll-line{width:1px;height:44px;background:linear-gradient(var(--warm),transparent);animation:pulse 2s infinite;}
-@keyframes fadeUp{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
+.hero-bg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 65%;}
+.hero-ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(8,8,7,.95) 0%,rgba(8,8,7,.55) 45%,rgba(8,8,7,.15) 100%);}
+.hero-content{position:relative;z-index:2;padding:0 64px 80px;max-width:900px;}
+.hero-tag{font-size:9px;font-weight:600;letter-spacing:.32em;text-transform:uppercase;color:var(--warm);margin-bottom:24px;display:block;}
+.hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(48px,7vw,88px);font-weight:300;color:var(--white);line-height:1.02;letter-spacing:.02em;margin-bottom:28px;}
+.hero-title em{font-style:italic;color:var(--warm2);}
+.hero-sub{font-size:15px;color:rgba(245,240,232,.55);font-weight:300;max-width:480px;line-height:1.8;margin-bottom:44px;}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap;}
+.btn-primary{display:inline-flex;align-items:center;gap:10px;background:var(--warm);color:var(--black);font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;padding:16px 36px;text-decoration:none;transition:background .25s;}
+.btn-primary:hover{background:var(--warm2);}
+.btn-ghost{display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(245,240,232,.25);color:rgba(245,240,232,.75);font-size:10px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;padding:16px 36px;text-decoration:none;transition:all .25s;}
+.btn-ghost:hover{border-color:rgba(245,240,232,.6);color:var(--white);}
+.hero-scroll{position:absolute;bottom:36px;right:64px;display:flex;flex-direction:column;align-items:center;gap:8px;}
+.hero-scroll span{font-size:8px;letter-spacing:.3em;text-transform:uppercase;color:rgba(245,240,232,.3);}
+.scroll-line{width:1px;height:48px;background:linear-gradient(var(--warm),transparent);animation:pulse 2s infinite;}
 @keyframes pulse{0%,100%{opacity:.3;}50%{opacity:1;}}
 
 /* STATS */
-.stats{display:grid;grid-template-columns:repeat(4,1fr);background:var(--white);border-top:3px solid var(--red);border-bottom:1px solid var(--ln);}
-.stat{padding:32px 24px;text-align:center;border-right:1px solid var(--ln);}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--ln);border-bottom:1px solid var(--ln);}
+.stat{padding:36px 28px;text-align:center;border-right:1px solid var(--ln);background:var(--dark);}
 .stat:last-child{border-right:none;}
-.stat-val{font-family:'Playfair Display',serif;font-size:38px;font-weight:400;color:var(--red);line-height:1;margin-bottom:6px;}
-.stat-lbl{font-size:10px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--txt3);}
+.stat-val{font-family:'Cormorant Garamond',serif;font-size:42px;font-weight:300;color:var(--warm);line-height:1;margin-bottom:8px;}
+.stat-lbl{font-size:10px;font-weight:400;letter-spacing:.14em;text-transform:uppercase;color:var(--txt3);}
 
 /* SECTIONS */
-section{padding:100px 60px;}
-.mw{max-width:1160px;margin:0 auto;}
-.eyebrow{font-size:9px;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:var(--red);margin-bottom:12px;}
-.section-title{font-family:'Playfair Display',serif;font-size:clamp(28px,3.8vw,48px);font-weight:400;color:var(--txt);line-height:1.12;}
-.section-title em{font-style:italic;color:var(--warm);}
-.rule{width:40px;height:3px;background:var(--red);margin:18px 0 24px;}
-.body-text{font-size:15px;color:var(--txt2);line-height:1.88;font-weight:300;}
+section{padding:112px 64px;}
+.mw{max-width:1200px;margin:0 auto;}
+.eyebrow{font-size:9px;font-weight:600;letter-spacing:.32em;text-transform:uppercase;color:var(--warm);margin-bottom:14px;display:block;}
+.section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(32px,4vw,54px);font-weight:300;color:var(--white);line-height:1.1;}
+.section-title em{font-style:italic;color:var(--warm2);}
+.rule{width:36px;height:1px;background:var(--warm);margin:20px 0 26px;}
+.body-text{font-size:15px;color:rgba(245,240,232,.55);line-height:1.9;font-weight:300;}
 
 /* ABOUT */
-#about{background:var(--white);}
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;}
-.feat-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
-.feat-card{background:var(--cream);border:1px solid var(--ln);padding:28px 24px;transition:border-color .25s,transform .25s;}
-.feat-card:hover{border-color:var(--warm);transform:translateY(-3px);}
-.feat-icon{font-size:28px;margin-bottom:14px;}
-.feat-title{font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--txt);margin-bottom:8px;}
-.feat-body{font-size:13px;color:var(--txt2);line-height:1.72;font-weight:300;}
+#about{background:var(--dark);}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:100px;align-items:start;}
+.about-right{display:flex;flex-direction:column;gap:0;}
+.about-point{padding:24px 0;border-bottom:1px solid var(--ln);}
+.about-point:first-child{border-top:1px solid var(--ln);}
+.about-point-title{font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--white);margin-bottom:8px;}
+.about-point-body{font-size:13.5px;color:rgba(245,240,232,.45);line-height:1.75;font-weight:300;}
 
-/* ABOUT PHOTO STRIP */
-.about-photos{display:grid;grid-template-columns:2fr 1fr 1fr;gap:4px;margin-top:64px;height:300px;}
-.about-photo{overflow:hidden;position:relative;}
-.about-photo img{width:100%;height:100%;object-fit:cover;transition:transform .7s ease;}
-.about-photo:hover img{transform:scale(1.04);}
-.about-photo-label{position:absolute;bottom:12px;left:14px;font-size:9px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:#fff;background:rgba(192,57,43,.85);padding:4px 10px;}
+/* PHOTO STRIP */
+.photo-strip{display:grid;grid-template-columns:2fr 1fr 1fr;gap:3px;height:320px;margin-top:80px;}
+.ps-img{overflow:hidden;position:relative;}
+.ps-img img{width:100%;height:100%;object-fit:cover;transition:transform .8s ease;filter:brightness(.75);}
+.ps-img:hover img{transform:scale(1.04);filter:brightness(.9);}
+.ps-label{position:absolute;bottom:16px;left:18px;font-size:9px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:rgba(245,240,232,.7);}
 
 /* MASTERPLAN */
-#masterplan{background:var(--cream2);}
-.mp-wrap{margin-top:48px;border:1px solid var(--ln);overflow:hidden;}
-.mp-wrap img{width:100%;height:auto;display:block;}
-.mp-caption{background:var(--white);border-top:1px solid var(--ln);padding:20px 28px;display:flex;flex-wrap:wrap;gap:12px 28px;}
-.mp-tag{font-size:10px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--txt2);display:flex;align-items:center;gap:6px;}
-.mp-tag::before{content:'';width:8px;height:8px;flex-shrink:0;}
-.mp-tag:nth-child(1)::before{background:var(--red);}
-.mp-tag:nth-child(2)::before{background:var(--green);}
-.mp-tag:nth-child(3)::before{background:var(--sky);}
-.mp-tag:nth-child(4)::before{background:var(--wood);}
-.mp-tag:nth-child(5)::before{background:var(--warm);}
+#masterplan{background:var(--black);padding:112px 64px;}
+.mp-layout{display:grid;grid-template-columns:1fr 1.6fr;gap:80px;align-items:start;margin-top:0;}
+.mp-img{border:1px solid var(--ln);overflow:hidden;}
+.mp-img img{width:100%;height:auto;display:block;filter:brightness(.9);}
+.mp-tags{display:flex;flex-direction:column;gap:0;margin-top:28px;}
+.mp-tag{display:flex;align-items:center;gap:12px;padding:14px 0;border-bottom:1px solid var(--ln);font-size:11px;font-weight:400;letter-spacing:.1em;text-transform:uppercase;color:rgba(245,240,232,.45);}
+.mp-tag:first-child{border-top:1px solid var(--ln);}
+.mp-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0;}
 
 /* VILLAS */
-#villas{background:var(--white);}
-.villa-tabs{display:flex;gap:0;margin-bottom:48px;border-bottom:2px solid var(--ln);}
-.villa-tab{padding:14px 32px;font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--txt3);cursor:pointer;border:none;background:none;transition:color .2s;position:relative;border-bottom:3px solid transparent;margin-bottom:-2px;font-family:'Jost',sans-serif;}
-.villa-tab.active{color:var(--red);border-bottom-color:var(--red);}
-.villa-tab:hover{color:var(--txt);}
+#villas{background:var(--dark);}
+.villa-tabs{display:flex;gap:0;margin-bottom:56px;border-bottom:1px solid var(--ln);}
+.villa-tab{padding:16px 36px;font-size:10px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:rgba(245,240,232,.35);cursor:pointer;border:none;background:none;transition:color .2s;position:relative;border-bottom:2px solid transparent;margin-bottom:-1px;font-family:'Jost',sans-serif;}
+.villa-tab.active{color:var(--warm);border-bottom-color:var(--warm);}
+.villa-tab:hover{color:rgba(245,240,232,.7);}
 .villa-panel{display:none;}
 .villa-panel.active{display:block;}
-.villa-layout{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--ln);}
+.villa-layout{display:grid;grid-template-columns:1fr 1fr;}
 .villa-imgs{display:flex;flex-direction:column;}
-.villa-main-img{height:420px;overflow:hidden;position:relative;background:var(--sand);}
-.villa-main-img img{width:100%;height:100%;object-fit:cover;transition:transform .7s ease;}
-.villa-main-img:hover img{transform:scale(1.04);}
-.villa-thumbs{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--ln);}
-.villa-thumb{height:160px;overflow:hidden;cursor:pointer;background:var(--sand);}
-.villa-thumb img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease;}
-.villa-thumb:hover img{transform:scale(1.06);}
-.villa-info{padding:44px 38px;display:flex;flex-direction:column;justify-content:space-between;background:var(--cream);}
-.villa-name{font-family:'Playfair Display',serif;font-size:32px;font-weight:400;color:var(--txt);margin-bottom:6px;line-height:1.1;}
-.villa-type{font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--red);margin-bottom:20px;}
-.villa-desc{font-size:14px;color:var(--txt2);line-height:1.82;font-weight:300;margin-bottom:28px;}
-.villa-specs{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:28px;}
-.spec{background:var(--white);border:1px solid var(--ln);padding:14px 16px;}
-.spec-val{font-family:'Playfair Display',serif;font-size:22px;font-weight:400;color:var(--txt);line-height:1;}
-.spec-lbl{font-size:10px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--txt3);margin-top:4px;}
-.plans-label{font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--txt2);margin-bottom:10px;display:block;}
-.plan-toggle{background:none;border:2px solid var(--ln);color:var(--txt2);font-family:'Jost',sans-serif;font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:9px 18px;cursor:pointer;transition:all .2s;margin-right:8px;margin-bottom:8px;}
-.plan-toggle.active,.plan-toggle:hover{border-color:var(--red);color:var(--red);}
-.plan-img{margin-top:14px;display:none;border:1px solid var(--ln);}
+.villa-main-img{height:460px;overflow:hidden;position:relative;background:var(--dark2);}
+.villa-main-img img{width:100%;height:100%;object-fit:cover;transition:transform .8s ease;}
+.villa-main-img:hover img{transform:scale(1.03);}
+.villa-thumbs{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--black);}
+.villa-thumb{height:150px;overflow:hidden;cursor:pointer;background:var(--dark2);}
+.villa-thumb img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease;filter:brightness(.7);}
+.villa-thumb:hover img{transform:scale(1.06);filter:brightness(.9);}
+.villa-info{padding:52px 48px;background:var(--dark2);display:flex;flex-direction:column;justify-content:space-between;}
+.villa-tag{font-size:9px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--warm);margin-bottom:12px;}
+.villa-name{font-family:'Cormorant Garamond',serif;font-size:38px;font-weight:300;color:var(--white);line-height:1.05;margin-bottom:20px;}
+.villa-desc{font-size:14px;color:rgba(245,240,232,.45);line-height:1.85;font-weight:300;margin-bottom:32px;}
+.villa-specs{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-bottom:32px;}
+.spec{background:var(--dark);padding:18px 16px;}
+.spec-val{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:300;color:var(--white);line-height:1;}
+.spec-lbl{font-size:9px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--txt3);margin-top:5px;}
+.plans-label{font-size:9px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:rgba(245,240,232,.35);margin-bottom:10px;display:block;}
+.plan-toggle{background:none;border:1px solid var(--ln);color:rgba(245,240,232,.35);font-family:'Jost',sans-serif;font-size:9px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;padding:9px 18px;cursor:pointer;transition:all .2s;margin-right:6px;margin-bottom:6px;}
+.plan-toggle.active,.plan-toggle:hover{border-color:var(--warm);color:var(--warm);}
+.plan-img{margin-top:14px;display:none;}
 .plan-img.show{display:block;}
-.plan-img img{width:100%;height:auto;display:block;}
-.villa-cta{margin-top:24px;}
+.plan-img img{width:100%;height:auto;display:block;filter:brightness(.9);}
+.villa-cta{margin-top:32px;}
 
 /* AMENITIES */
-#amenities{background:var(--cream2);position:relative;overflow:hidden;}
-.amenities-bg{position:absolute;inset:0;opacity:.07;}
-.amenities-bg img{width:100%;height:100%;object-fit:cover;}
-.amen-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--ln);border:1px solid var(--ln);margin-top:48px;position:relative;z-index:1;}
-.amen-item{background:var(--white);padding:32px 24px;text-align:center;transition:background .25s;}
-.amen-item:hover{background:var(--cream);}
-.amen-icon{font-size:30px;margin-bottom:14px;}
-.amen-name{font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--txt);margin-bottom:8px;}
-.amen-desc{font-size:12.5px;color:var(--txt3);line-height:1.65;font-weight:300;}
+#amenities{background:var(--black);}
+.amen-intro{display:grid;grid-template-columns:1fr 1fr;gap:100px;align-items:end;margin-bottom:64px;}
+.amen-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--ln);}
+.amen-item{background:var(--dark);padding:36px 28px;transition:background .25s;}
+.amen-item:hover{background:var(--dark2);}
+.amen-num{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:300;color:rgba(184,147,90,.2);line-height:1;margin-bottom:16px;}
+.amen-name{font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--white);margin-bottom:10px;}
+.amen-desc{font-size:12.5px;color:rgba(245,240,232,.38);line-height:1.68;font-weight:300;}
 
 /* WHY */
-#why{background:var(--white);}
-.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;margin-top:48px;}
-.why-img-wrap{position:relative;height:560px;overflow:hidden;}
-.why-img-wrap img{width:100%;height:100%;object-fit:cover;}
-.why-badge{position:absolute;bottom:24px;right:24px;background:var(--white);border:2px solid var(--red);padding:20px;text-align:center;width:130px;}
-.why-badge-val{font-family:'Playfair Display',serif;font-size:30px;font-weight:400;color:var(--red);line-height:1;}
-.why-badge-lbl{font-size:9px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--txt2);margin-top:6px;line-height:1.4;}
+#why{background:var(--dark);}
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:100px;align-items:center;margin-top:56px;}
+.why-img-wrap{position:relative;height:580px;overflow:hidden;}
+.why-img-wrap img{width:100%;height:100%;object-fit:cover;filter:brightness(.75);}
+.why-badge{position:absolute;bottom:0;left:0;background:var(--dark);padding:28px 32px;border-top:2px solid var(--warm);}
+.why-badge-val{font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:300;color:var(--warm);line-height:1;}
+.why-badge-lbl{font-size:9px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:rgba(245,240,232,.45);margin-top:6px;line-height:1.5;}
 .why-points{display:flex;flex-direction:column;}
-.why-point{display:flex;gap:20px;padding:22px 0;border-bottom:1px solid var(--ln);}
+.why-point{display:flex;gap:22px;padding:24px 0;border-bottom:1px solid var(--ln);}
 .why-point:first-child{border-top:1px solid var(--ln);}
-.why-num{font-family:'Playfair Display',serif;font-size:20px;font-weight:400;color:var(--sand);min-width:28px;line-height:1.5;}
-.why-pt-title{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--txt);margin-bottom:5px;}
-.why-pt-body{font-size:13.5px;color:var(--txt2);line-height:1.72;font-weight:300;}
+.why-num{font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:300;color:rgba(184,147,90,.3);min-width:24px;line-height:1.8;flex-shrink:0;}
+.why-pt-title{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--white);margin-bottom:6px;}
+.why-pt-body{font-size:13.5px;color:rgba(245,240,232,.42);line-height:1.75;font-weight:300;}
 
 /* LOCATION STRIP */
-.location-strip{background:var(--txt);padding:80px 60px;}
-.location-strip .mw{display:grid;grid-template-columns:1fr 1fr 1fr;gap:4px;height:380px;}
-.loc-photo{overflow:hidden;position:relative;}
-.loc-photo img{width:100%;height:100%;object-fit:cover;transition:transform .7s ease;filter:brightness(.85);}
-.loc-photo:hover img{transform:scale(1.05);filter:brightness(1);}
-.loc-label{position:absolute;bottom:0;left:0;right:0;padding:20px 18px;background:linear-gradient(transparent,rgba(44,33,24,.75));color:#fff;}
-.loc-label-title{font-family:'Playfair Display',serif;font-size:16px;font-weight:400;margin-bottom:2px;}
-.loc-label-sub{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.65);}
+.loc-strip{display:grid;grid-template-columns:1fr 1fr 1fr;gap:2px;height:400px;}
+.loc-img{overflow:hidden;position:relative;}
+.loc-img img{width:100%;height:100%;object-fit:cover;filter:brightness(.6);transition:all .7s ease;}
+.loc-img:hover img{filter:brightness(.8);transform:scale(1.04);}
+.loc-label{position:absolute;bottom:0;left:0;right:0;padding:28px 24px;background:linear-gradient(transparent,rgba(8,8,7,.85));}
+.loc-title{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:300;color:var(--white);margin-bottom:3px;}
+.loc-sub{font-size:9px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:rgba(245,240,232,.45);}
 
 /* CONTACT */
-#contact{background:var(--cream2);}
-.contact-wrap{display:grid;grid-template-columns:1fr 1fr;gap:80px;}
-.contact-info{display:flex;flex-direction:column;gap:32px;margin-top:8px;}
-.ci-label{font-size:9px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--red);margin-bottom:6px;}
-.ci-val{font-size:16px;color:var(--txt);}
-.ci-val a{color:var(--txt);text-decoration:none;transition:color .2s;}
-.ci-val a:hover{color:var(--red);}
-.wa-btn{display:inline-flex;align-items:center;gap:10px;background:var(--red);color:#fff;font-size:10px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;padding:16px 30px;text-decoration:none;transition:all .25s;margin-top:8px;border:2px solid var(--red);}
-.wa-btn:hover{background:var(--red2);border-color:var(--red2);}
-.contact-form{display:flex;flex-direction:column;gap:16px;}
-.form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
-.fl{display:block;font-size:9px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--txt2);margin-bottom:5px;}
-input,textarea,select{width:100%;background:var(--white);border:1.5px solid var(--ln);color:var(--txt);font-family:'Jost',sans-serif;font-size:14px;padding:13px 16px;outline:none;transition:border-color .2s;-webkit-appearance:none;border-radius:0;}
+#contact{background:var(--dark2);}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:100px;}
+.contact-info{display:flex;flex-direction:column;gap:36px;margin-top:4px;}
+.ci-label{font-size:9px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--warm);margin-bottom:6px;}
+.ci-val{font-size:16px;color:rgba(245,240,232,.75);}
+.ci-val a{color:rgba(245,240,232,.75);text-decoration:none;transition:color .2s;}
+.ci-val a:hover{color:var(--white);}
+.wa-btn{display:inline-flex;align-items:center;gap:10px;background:var(--warm);color:var(--black);font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;padding:16px 32px;text-decoration:none;transition:background .25s;margin-top:8px;}
+.wa-btn:hover{background:var(--warm2);}
+.contact-form{display:flex;flex-direction:column;gap:14px;}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.fl{display:block;font-size:9px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:rgba(245,240,232,.35);margin-bottom:5px;}
+input,textarea,select{width:100%;background:rgba(255,255,255,.04);border:1px solid var(--ln);color:rgba(245,240,232,.8);font-family:'Jost',sans-serif;font-size:14px;padding:14px 16px;outline:none;transition:border-color .2s;-webkit-appearance:none;border-radius:0;}
 input:focus,textarea:focus,select:focus{border-color:var(--warm);}
 textarea{min-height:110px;resize:vertical;}
-select{cursor:pointer;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='7'%3E%3Cpath fill='%236B5744' d='M6 7L0 0h12z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center;background-color:var(--white);}
-.form-submit{background:var(--red);border:2px solid var(--red);color:#fff;font-family:'Jost',sans-serif;font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;padding:16px 36px;cursor:pointer;transition:all .25s;align-self:flex-start;}
-.form-submit:hover{background:var(--red2);border-color:var(--red2);}
-.form-note{font-size:11.5px;color:var(--txt3);min-height:18px;}
+select{cursor:pointer;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='7'%3E%3Cpath fill='%238A8070' d='M6 7L0 0h12z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center;background-color:rgba(255,255,255,.04);}
+select option{background:#0F0E0C;}
+.form-submit{background:var(--warm);border:none;color:var(--black);font-family:'Jost',sans-serif;font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;padding:16px 36px;cursor:pointer;transition:background .25s;align-self:flex-start;}
+.form-submit:hover{background:var(--warm2);}
+.form-note{font-size:11px;color:rgba(245,240,232,.25);min-height:16px;}
 
 /* FOOTER */
-footer{background:var(--txt);color:var(--sand);padding:56px 60px 32px;}
-.footer-top{display:grid;grid-template-columns:1.8fr 1fr 1fr 1fr;gap:48px;padding-bottom:40px;border-bottom:1px solid rgba(200,180,160,.12);}
-.footer-brand{font-family:'Playfair Display',serif;font-size:24px;font-weight:700;letter-spacing:.16em;color:var(--cream);margin-bottom:12px;}
+footer{background:var(--black);border-top:1px solid var(--ln);padding:64px 64px 36px;}
+.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:52px;padding-bottom:48px;border-bottom:1px solid var(--ln);}
+.footer-brand{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:400;letter-spacing:.28em;color:var(--white);text-transform:uppercase;margin-bottom:14px;}
 .footer-brand span{color:var(--warm);}
-.footer-sub{font-size:13px;color:rgba(200,180,160,.55);line-height:1.75;max-width:220px;font-weight:300;}
-.footer-col-title{font-size:9px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--warm);margin-bottom:16px;}
-.footer-col a,.footer-col p{display:block;font-size:13px;color:rgba(200,180,160,.5);text-decoration:none;transition:color .2s;margin-bottom:9px;font-weight:300;}
-.footer-col a:hover{color:var(--cream);}
-.footer-bot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;padding-top:26px;}
-.footer-copy{font-size:11px;color:rgba(200,180,160,.3);}
-.footer-links{display:flex;gap:20px;}
-.footer-links a{font-size:11px;color:rgba(200,180,160,.3);text-decoration:none;transition:color .2s;}
-.footer-links a:hover{color:var(--cream);}
+.footer-sub{font-size:13px;color:rgba(245,240,232,.28);line-height:1.78;max-width:230px;font-weight:300;}
+.footer-col-title{font-size:9px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--warm);margin-bottom:18px;}
+.footer-col a,.footer-col p{display:block;font-size:13px;color:rgba(245,240,232,.3);text-decoration:none;transition:color .2s;margin-bottom:10px;font-weight:300;}
+.footer-col a:hover{color:rgba(245,240,232,.75);}
+.footer-bot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;padding-top:28px;}
+.footer-copy{font-size:10px;color:rgba(245,240,232,.2);}
+.footer-links{display:flex;gap:22px;}
+.footer-links a{font-size:10px;color:rgba(245,240,232,.2);text-decoration:none;transition:color .2s;}
+.footer-links a:hover{color:rgba(245,240,232,.6);}
 
 /* FLOAT WA */
-.waf{position:fixed;bottom:28px;right:28px;z-index:997;width:54px;height:54px;background:var(--red);border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 4px 20px rgba(192,57,43,.38);transition:transform .25s,box-shadow .25s;}
-.waf:hover{transform:scale(1.1);box-shadow:0 6px 28px rgba(192,57,43,.55);}
-.waf svg{width:24px;height:24px;fill:#fff;}
+.waf{position:fixed;bottom:28px;right:28px;z-index:997;width:52px;height:52px;background:var(--warm);border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 4px 20px rgba(184,147,90,.35);transition:transform .25s,background .25s;}
+.waf:hover{transform:scale(1.1);background:var(--warm2);}
+.waf svg{width:22px;height:22px;fill:var(--black);}
 
 /* RESPONSIVE */
 @media(max-width:980px){
   header{padding:0 20px;}
   nav{display:none;}
-  section{padding:68px 20px;}
-  .location-strip{padding:0;}
-  .location-strip .mw{grid-template-columns:1fr;height:auto;}
-  .loc-photo{height:220px;}
+  section{padding:72px 20px;}
+  #masterplan{padding:72px 20px;}
+  .hero-content{padding:0 20px 60px;}
+  .hero-scroll{right:20px;}
   .stats{grid-template-columns:repeat(2,1fr);}
-  .about-grid,.villa-layout,.why-grid,.contact-wrap{grid-template-columns:1fr;}
-  .about-photos{grid-template-columns:1fr 1fr;height:auto;}
-  .about-photos .about-photo:last-child{display:none;}
-  .about-photo{height:180px;}
-  .feat-grid{grid-template-columns:1fr;}
-  .villa-tabs{overflow-x:auto;}
+  .about-grid,.mp-layout,.villa-layout,.why-grid,.contact-grid{grid-template-columns:1fr;gap:40px;}
+  .amen-intro{grid-template-columns:1fr;}
   .amen-grid{grid-template-columns:repeat(2,1fr);}
-  .footer-top{grid-template-columns:1fr 1fr;}
+  .photo-strip,.loc-strip{grid-template-columns:1fr;height:auto;}
+  .ps-img,.loc-img{height:220px;}
+  .villa-tabs{overflow-x:auto;}
+  .footer-top{grid-template-columns:1fr 1fr;gap:32px;}
   .footer-bot{flex-direction:column;text-align:center;}
   .form-row{grid-template-columns:1fr;}
   .why-img-wrap{height:300px;}
@@ -254,8 +247,8 @@ footer{background:var(--txt);color:var(--sand);padding:56px 60px 32px;}
     <a href="#masterplan" data-en="Masterplan" data-pt="Masterplan">Masterplan</a>
     <a href="#villas" data-en="Villas" data-pt="Villas">Villas</a>
     <a href="#amenities" data-en="Amenities" data-pt="Amenidades">Amenities</a>
-    <a href="#why" data-en="Why Maricá" data-pt="Por que Maricá">Why Maricá</a>
-    <a href="#contact" data-en="Contact" data-pt="Contato">Contact</a>
+    <a href="#why" data-en="Why Brazil" data-pt="Por que Brasil">Why Brazil</a>
+    <a href="#contact" class="nav-cta" data-en="Contact" data-pt="Contato">Contact</a>
   </nav>
   <div class="lang-sw">
     <button class="lang-btn on" onclick="setLang('en',this)" title="English">🇬🇧</button>
@@ -266,26 +259,26 @@ footer{background:var(--txt);color:var(--sand);padding:56px 60px 32px;}
 <!-- HERO -->
 <section class="hero" style="padding:0;">
   <div class="hero-bg">
-    <img src="images/marica-aerial.jpg" alt="Maricá coastline">
+    <img src="images/marica-aerial.jpg" alt="Maricá Brazil">
   </div>
   <div class="hero-ov"></div>
   <div class="hero-content">
-    <div class="hero-pill" data-en="Gated Community — Maricá, Rio de Janeiro" data-pt="Condomínio Fechado — Maricá, Rio de Janeiro">Gated Community — Maricá, Rio de Janeiro</div>
-    <h1 class="hero-title">ANATO<em>L</em>I</h1>
-    <p class="hero-sub" data-en="Luxury villas by the unspoilt Brazilian coast. 50km from Rio de Janeiro." data-pt="Villas de luxo à beira da costa brasileira preservada. 50km do Rio de Janeiro.">Luxury villas by the unspoilt Brazilian coast. 50km from Rio de Janeiro.</p>
+    <span class="hero-tag" data-en="Premium Real Estate Developer — Brazil" data-pt="Incorporadora Imobiliária Premium — Brasil">Premium Real Estate Developer — Brazil</span>
+    <h1 class="hero-title" data-en="Creating Brazil's<br>next <em>luxury</em><br>destination." data-pt="Criando o próximo<br>destino de <em>luxo</em><br>do Brasil.">Creating Brazil's<br>next <em>luxury</em><br>destination.</h1>
+    <p class="hero-sub" data-en="Anatoli develops premium gated communities for lifestyle investors and high-net-worth individuals. Maricá, Rio de Janeiro — where Brazil's future is being built." data-pt="A Anatoli desenvolve condomínios fechados premium para investidores de estilo de vida e indivíduos de alto patrimônio. Maricá, Rio de Janeiro — onde o futuro do Brasil está sendo construído.">Anatoli develops premium gated communities for lifestyle investors and high-net-worth individuals. Maricá, Rio de Janeiro — where Brazil's future is being built.</p>
     <div class="hero-btns">
-      <a href="#villas" class="btn-primary" data-en="Discover the Villas" data-pt="Descobrir as Villas">Discover the Villas</a>
-      <a href="#contact" class="btn-outline" data-en="Contact Us" data-pt="Contacte-nos">Contact Us</a>
+      <a href="#villas" class="btn-primary" data-en="Explore the Villas" data-pt="Explorar as Villas">Explore the Villas</a>
+      <a href="#contact" class="btn-ghost" data-en="Request Information" data-pt="Solicitar Informação">Request Information</a>
     </div>
   </div>
-  <div class="scroll-hint"><span data-en="Scroll" data-pt="Role">Scroll</span><div class="scroll-line"></div></div>
+  <div class="hero-scroll"><span data-en="Scroll" data-pt="Role">Scroll</span><div class="scroll-line"></div></div>
 </section>
 
 <!-- STATS -->
 <div class="stats">
-  <div class="stat"><div class="stat-val">50<small style="font-size:18px">km</small></div><div class="stat-lbl" data-en="From Rio de Janeiro" data-pt="Do Rio de Janeiro">From Rio de Janeiro</div></div>
-  <div class="stat"><div class="stat-val">3</div><div class="stat-lbl" data-en="Villa types available" data-pt="Tipos de villa disponíveis">Villa types available</div></div>
-  <div class="stat"><div class="stat-val">$6Bn</div><div class="stat-lbl" data-en="Petrobras investment nearby" data-pt="Investimento Petrobras na região">Petrobras investment nearby</div></div>
+  <div class="stat"><div class="stat-val">50<small style="font-size:20px">km</small></div><div class="stat-lbl" data-en="From Rio de Janeiro" data-pt="Do Rio de Janeiro">From Rio de Janeiro</div></div>
+  <div class="stat"><div class="stat-val">3</div><div class="stat-lbl" data-en="Villa typologies" data-pt="Tipologias de villa">Villa typologies</div></div>
+  <div class="stat"><div class="stat-val">$6Bn</div><div class="stat-lbl" data-en="Petrobras regional investment" data-pt="Investimento regional Petrobras">Petrobras regional investment</div></div>
   <div class="stat"><div class="stat-val">100%</div><div class="stat-lbl" data-en="Brazilian legal entity" data-pt="Entidade jurídica brasileira">Brazilian legal entity</div></div>
 </div>
 
@@ -294,67 +287,57 @@ footer{background:var(--txt);color:var(--sand);padding:56px 60px 32px;}
   <div class="mw">
     <div class="about-grid">
       <div>
-        <div class="eyebrow" data-en="01 — Who We Are" data-pt="01 — Quem Somos">01 — Who We Are</div>
-        <h2 class="section-title" data-en="A premium Brazilian<br>real estate developer" data-pt="Uma incorporadora imobiliária<br>premium brasileira">A premium Brazilian<br>real estate developer</h2>
+        <span class="eyebrow" data-en="01 — The Developer" data-pt="01 — O Incorporador">01 — The Developer</span>
+        <h2 class="section-title" data-en="A new standard<br>for <em>Brazilian</em><br>luxury living." data-pt="Um novo padrão<br>para a vida de <em>luxo</em><br>brasileira.">A new standard<br>for <em>Brazilian</em><br>luxury living.</h2>
         <div class="rule"></div>
-        <p class="body-text" data-en="Anatoli is a fully registered Brazilian real estate company — regulated under Brazilian law, built on international expertise. We develop luxury gated communities in Maricá, one of Brazil's fastest-growing coastal destinations.<br><br>Our team is both Brazilian and European — combining local market knowledge with the transparency and execution standards that international investors expect. From land acquisition and permitting to infrastructure and final delivery, we manage the full development cycle." data-pt="A Anatoli é uma empresa imobiliária brasileira totalmente registrada — regulamentada pela legislação brasileira, construída com expertise internacional. Desenvolvemos comunidades fechadas de luxo em Maricá, um dos destinos costeiros de mais rápido crescimento do Brasil.<br><br>Nossa equipe é binacional, brasileira e europeia — combinando conhecimento local com os padrões de transparência e execução que os investidores internacionais esperam.">Anatoli is a fully registered Brazilian real estate company — regulated under Brazilian law, built on international expertise. We develop luxury gated communities in Maricá, one of Brazil's fastest-growing coastal destinations.<br><br>Our team is both Brazilian and European — combining local market knowledge with the transparency and execution standards that international investors expect.</p>
+        <p class="body-text" data-en="Anatoli is a fully registered Brazilian real estate developer building premium gated communities for an international clientele. We identify exceptional locations across Brazil where natural beauty, infrastructure growth and investment fundamentals converge — and we build the communities that define them.<br><br>Our team combines Brazilian market expertise with European standards of transparency, design and execution. From land acquisition to final handover, we manage the full development cycle with one point of contact." data-pt="A Anatoli é uma incorporadora imobiliária brasileira totalmente registrada, construindo condomínios fechados premium para uma clientela internacional. Identificamos localizações excepcionais no Brasil onde a beleza natural, o crescimento de infraestrutura e os fundamentos de investimento convergem.">Anatoli is a fully registered Brazilian real estate developer building premium gated communities for an international clientele. We identify exceptional locations across Brazil where natural beauty, infrastructure growth and investment fundamentals converge — and we build the communities that define them.<br><br>Our team combines Brazilian market expertise with European standards of transparency, design and execution.</p>
       </div>
-      <div class="feat-grid">
-        <div class="feat-card">
-          <div class="feat-icon">🏡</div>
-          <div class="feat-title" data-en="3 Villa Types" data-pt="3 Tipos de Villa">3 Villa Types</div>
-          <p class="feat-body" data-en="Bungalow, Type 1 and Type 2 — each with private pool, garden and premium finishes." data-pt="Bungalow, Tipo 1 e Tipo 2 — cada um com piscina privativa, jardim e acabamentos premium.">Bungalow, Type 1 and Type 2 — each with private pool, garden and premium finishes.</p>
+      <div class="about-right">
+        <div class="about-point">
+          <div class="about-point-title" data-en="Lifestyle investment" data-pt="Investimento de estilo de vida">Lifestyle investment</div>
+          <p class="about-point-body" data-en="We develop for a new generation of high-net-worth individuals seeking both exceptional living and strong investment returns in emerging Brazilian markets." data-pt="Desenvolvemos para uma nova geração de indivíduos de alto patrimônio que buscam vida excepcional e forte retorno sobre investimento em mercados brasileiros emergentes.">We develop for a new generation of high-net-worth individuals seeking both exceptional living and strong investment returns in emerging Brazilian markets.</p>
         </div>
-        <div class="feat-card">
-          <div class="feat-icon">🔒</div>
-          <div class="feat-title" data-en="Gated & Secure" data-pt="Condomínio Fechado">Gated & Secure</div>
-          <p class="feat-body" data-en="24/7 security, controlled access, clubhouse, spa, pool and floating pier on the lagoon." data-pt="Segurança 24h, acesso controlado, clube, spa, piscina e pier flutuante na lagoa.">24/7 security, controlled access, clubhouse, spa, pool and floating pier on the lagoon.</p>
+        <div class="about-point">
+          <div class="about-point-title" data-en="Full-cycle development" data-pt="Desenvolvimento ciclo completo">Full-cycle development</div>
+          <p class="about-point-body" data-en="Land acquisition, permitting, infrastructure, construction and delivery. One team, one point of contact, from first conversation to legal title transfer." data-pt="Aquisição de terreno, licenciamento, infraestrutura, construção e entrega. Uma equipe, um ponto de contato, da primeira conversa à transferência do título legal.">Land acquisition, permitting, infrastructure, construction and delivery. One team, one point of contact, from first conversation to legal title transfer.</p>
         </div>
-        <div class="feat-card">
-          <div class="feat-icon">🌿</div>
-          <div class="feat-title" data-en="Nature Reserve" data-pt="Reserva Natural">Nature Reserve</div>
-          <p class="feat-body" data-en="Bordered by a protected nature reserve — permanent green belt, privacy and exceptional biodiversity." data-pt="Bordejado por reserva natural protegida — cinturão verde permanente e biodiversidade excepcional.">Bordered by a protected nature reserve — permanent green belt, privacy and exceptional biodiversity.</p>
+        <div class="about-point">
+          <div class="about-point-title" data-en="Brazilian & European team" data-pt="Equipe brasileira & europeia">Brazilian & European team</div>
+          <p class="about-point-body" data-en="Local expertise combined with international execution standards. Every project is backed by full Brazilian legal documentation and complete transparency at every stage." data-pt="Expertise local combinada com padrões de execução internacionais. Cada projeto é respaldado por documentação jurídica brasileira completa e total transparência.">Local expertise combined with international execution standards. Every project is backed by full Brazilian legal documentation and complete transparency at every stage.</p>
         </div>
-        <div class="feat-card">
-          <div class="feat-icon">📋</div>
-          <div class="feat-title" data-en="Full Legal Title" data-pt="Título Legal Completo">Full Legal Title</div>
-          <p class="feat-body" data-en="Every sale backed by full Brazilian escritura and legal registration. Complete ownership transfer." data-pt="Cada venda respaldada por escritura brasileira completa e registro legal. Transferência de propriedade completa.">Every sale backed by full Brazilian escritura and legal registration. Complete ownership transfer.</p>
+        <div class="about-point">
+          <div class="about-point-title" data-en="Maricá — the flagship location" data-pt="Maricá — a localização principal">Maricá — the flagship location</div>
+          <p class="about-point-body" data-en="Our first development is positioned in Maricá — 50km from Rio, one of Brazil's fastest-growing municipalities, with roads already built on site and lots available now." data-pt="Nosso primeiro empreendimento está posicionado em Maricá — 50km do Rio, um dos municípios de mais rápido crescimento do Brasil, com estradas já construídas e lotes disponíveis agora.">Our first development is positioned in Maricá — 50km from Rio, one of Brazil's fastest-growing municipalities, with roads already built on site and lots available now.</p>
         </div>
       </div>
     </div>
-    <!-- PHOTO STRIP -->
-    <div class="about-photos">
-      <div class="about-photo">
-        <img src="images/marica-lagoon.jpg" alt="Maricá lagoon aerial view">
-        <div class="about-photo-label" data-en="Maricá Lagoon" data-pt="Lagoa de Maricá">Maricá Lagoon</div>
-      </div>
-      <div class="about-photo">
-        <img src="images/marica-beach.jpg" alt="Maricá beach">
-        <div class="about-photo-label" data-en="Maricá Beach" data-pt="Praia de Maricá">Maricá Beach</div>
-      </div>
-      <div class="about-photo">
-        <img src="images/marica-garden.jpg" alt="Tropical nature">
-        <div class="about-photo-label" data-en="Nature Reserve" data-pt="Reserva Natural">Nature Reserve</div>
-      </div>
+    <div class="photo-strip">
+      <div class="ps-img"><img src="images/marica-lagoon.jpg" alt="Maricá lagoon"><span class="ps-label" data-en="Maricá Lagoon" data-pt="Lagoa de Maricá">Maricá Lagoon</span></div>
+      <div class="ps-img"><img src="images/marica-beach.jpg" alt="Maricá beach"><span class="ps-label" data-en="Coastline" data-pt="Litoral">Coastline</span></div>
+      <div class="ps-img"><img src="images/marica-garden.jpg" alt="Nature"><span class="ps-label" data-en="Nature Reserve" data-pt="Reserva Natural">Nature Reserve</span></div>
     </div>
   </div>
 </section>
 
 <!-- MASTERPLAN -->
-<section id="masterplan">
+<section id="masterplan" style="background:var(--black);padding:112px 64px;">
   <div class="mw">
-    <div class="eyebrow" data-en="02 — The Estate" data-pt="02 — O Condomínio">02 — The Estate</div>
-    <h2 class="section-title" data-en="A complete lifestyle<br><em>community</em>" data-pt="Uma comunidade de<br><em>estilo de vida completo</em>">A complete lifestyle<br><em>community</em></h2>
-    <div class="rule"></div>
-    <p class="body-text" style="max-width:640px;" data-en="The Anatoli masterplan is a thoughtfully designed gated estate featuring villa clusters, a hotel zone, apartment condos and an extensive amenity belt along the lagoon waterfront. Roads are already built on site." data-pt="O masterplan Anatoli é um condomínio fechado cuidadosamente projetado com clusters de villas, zona hoteleira, condos de apartamentos e um extenso cinturão de amenidades ao longo da orla da lagoa. As estradas já estão construídas no terreno.">The Anatoli masterplan is a thoughtfully designed gated estate featuring villa clusters, a hotel zone, apartment condos and an extensive amenity belt along the lagoon waterfront. Roads are already built on site.</p>
-    <div class="mp-wrap">
-      <img src="images/masterplan.jpg" alt="Anatoli Masterplan">
-      <div class="mp-caption">
-        <div class="mp-tag" data-en="Villa Clusters A–E" data-pt="Clusters de Villas A–E">Villa Clusters A–E</div>
-        <div class="mp-tag" data-en="Nature Reserve" data-pt="Reserva Natural">Nature Reserve</div>
-        <div class="mp-tag" data-en="Lagoon & Floating Pier" data-pt="Lagoa & Pier Flutuante">Lagoon & Floating Pier</div>
-        <div class="mp-tag" data-en="Hotel & Residences" data-pt="Hotel & Residências">Hotel & Residences</div>
-        <div class="mp-tag" data-en="Club House & Spa" data-pt="Club House & Spa">Club House & Spa</div>
+    <span class="eyebrow" data-en="02 — The Estate" data-pt="02 — O Condomínio">02 — The Estate</span>
+    <div class="mp-layout">
+      <div>
+        <h2 class="section-title" data-en="A complete<br><em>lifestyle</em><br>community." data-pt="Uma comunidade<br>de <em>estilo de vida</em><br>completo.">A complete<br><em>lifestyle</em><br>community.</h2>
+        <div class="rule"></div>
+        <p class="body-text" style="margin-bottom:0;" data-en="The Anatoli masterplan creates a self-contained luxury estate with villa clusters, hotel residences, a full amenity programme and direct lagoon waterfront access. Every element is designed to create Brazil's most desirable new address." data-pt="O masterplan Anatoli cria um condomínio de luxo autossuficiente com clusters de villas, residências hoteleiras, um programa completo de amenidades e acesso direto à orla da lagoa.">The Anatoli masterplan creates a self-contained luxury estate with villa clusters, hotel residences, a full amenity programme and direct lagoon waterfront access. Every element is designed to create Brazil's most desirable new address.</p>
+        <div class="mp-tags">
+          <div class="mp-tag"><div class="mp-dot" style="background:var(--warm);"></div><span data-en="Villa Clusters A–E" data-pt="Clusters de Villas A–E">Villa Clusters A–E</span></div>
+          <div class="mp-tag"><div class="mp-dot" style="background:#4A7A5A;"></div><span data-en="Protected Nature Reserve" data-pt="Reserva Natural Protegida">Protected Nature Reserve</span></div>
+          <div class="mp-tag"><div class="mp-dot" style="background:#4A7AA8;"></div><span data-en="Lagoon & Floating Pier" data-pt="Lagoa & Pier Flutuante">Lagoon & Floating Pier</span></div>
+          <div class="mp-tag"><div class="mp-dot" style="background:#8A7060;"></div><span data-en="Hotel & Residences" data-pt="Hotel & Residências">Hotel & Residences</span></div>
+          <div class="mp-tag"><div class="mp-dot" style="background:#9A8A6A;"></div><span data-en="Club House, Spa & Amenities" data-pt="Club House, Spa & Amenidades">Club House, Spa & Amenities</span></div>
+        </div>
+      </div>
+      <div class="mp-img">
+        <img src="images/masterplan.jpg" alt="Anatoli Masterplan">
       </div>
     </div>
   </div>
@@ -363,138 +346,110 @@ footer{background:var(--txt);color:var(--sand);padding:56px 60px 32px;}
 <!-- VILLAS -->
 <section id="villas">
   <div class="mw">
-    <div class="eyebrow" data-en="03 — The Villas" data-pt="03 — As Villas">03 — The Villas</div>
-    <h2 class="section-title" data-en="Three types of<br><em>luxury living</em>" data-pt="Três tipos de<br><em>vida de luxo</em>">Three types of<br><em>luxury living</em></h2>
+    <span class="eyebrow" data-en="03 — The Villas" data-pt="03 — As Villas">03 — The Villas</span>
+    <h2 class="section-title" data-en="Three typologies.<br><em>One standard</em> of living." data-pt="Três tipologias.<br><em>Um padrão</em> de vida.">Three typologies.<br><em>One standard</em> of living.</h2>
     <div class="rule"></div>
-    <div class="villa-tabs">
+    <div class="villa-tabs" style="margin-top:48px;">
       <button class="villa-tab active" data-villa="enseada" data-en="Bungalow" data-pt="Bungalow">Bungalow</button>
-      <button class="villa-tab" data-villa="type1" data-en="House 3 Suites" data-pt="House 3 Suites">House 3 Suites</button>
-      <button class="villa-tab" data-villa="type2" data-en="House 4 Suites" data-pt="House 4 Suites">House 4 Suites</button>
+      <button class="villa-tab" data-villa="type1" data-en="House — 3 Suites" data-pt="House — 3 Suites">House — 3 Suites</button>
+      <button class="villa-tab" data-villa="type2" data-en="House — 4 Suites" data-pt="House — 4 Suites">House — 4 Suites</button>
     </div>
 
-    <!-- ENSEADA BUNGALOW -->
+    <!-- BUNGALOW -->
     <div class="villa-panel active" id="villa-enseada">
       <div class="villa-layout">
         <div class="villa-imgs">
-          <div class="villa-main-img" id="enseada-main">
-            <img src="images/bungalow-cam1.jpg" alt="Bungalow">
-          </div>
+          <div class="villa-main-img" id="enseada-main"><img src="images/bungalow-cam1.jpg" alt="Bungalow"></div>
           <div class="villa-thumbs">
-            <div class="villa-thumb" onclick="setMain('enseada-main','images/bungalow-cam1.jpg')">
-              <img src="images/bungalow-cam1.jpg" alt="Enseada view 1">
-            </div>
-            <div class="villa-thumb" onclick="setMain('enseada-main','images/bungalow-cam2.jpg')">
-              <img src="images/bungalow-cam2.jpg" alt="Enseada view 2">
-            </div>
+            <div class="villa-thumb" onclick="setMain('enseada-main','images/bungalow-cam1.jpg')"><img src="images/bungalow-cam1.jpg" alt="view 1"></div>
+            <div class="villa-thumb" onclick="setMain('enseada-main','images/bungalow-cam2.jpg')"><img src="images/bungalow-cam2.jpg" alt="view 2"></div>
           </div>
         </div>
         <div class="villa-info">
           <div>
-            <div class="villa-type" data-en="Single Storey · Private Pool" data-pt="Rés-do-chão · Piscina Privativa">Single Storey · Private Pool</div>
+            <div class="villa-tag" data-en="Single Storey · Private Pool" data-pt="Rés-do-chão · Piscina Privativa">Single Storey · Private Pool</div>
             <div class="villa-name">Bungalow</div>
-            <p class="villa-desc" data-en="The Bungalow is a beautifully designed single-storey villa combining open-plan living with private outdoor spaces. Large sliding glass doors open directly onto a generous pool terrace surrounded by a lush tropical garden." data-pt="O Bungalow é uma villa térrea belamente projetada, combinando vida em planta aberta com espaços exteriores privados. Grandes portas de vidro deslizantes abrem diretamente para um generoso terraço de piscina rodeado por um exuberante jardim tropical.">The Bungalow is a beautifully designed single-storey villa combining open-plan living with private outdoor spaces. Large sliding glass doors open directly onto a generous pool terrace surrounded by a lush tropical garden.</p>
+            <p class="villa-desc" data-en="A thoughtfully designed single-storey residence combining open-plan living with generous private outdoor spaces. Full-height sliding glazing opens directly onto the pool terrace and tropical garden — seamlessly merging indoor and outdoor living." data-pt="Uma residência térrea cuidadosamente projetada que combina vida em planta aberta com generosos espaços exteriores privados. Envidraçados deslizantes de altura total abrem diretamente para o terraço da piscina e jardim tropical.">A thoughtfully designed single-storey residence combining open-plan living with generous private outdoor spaces. Full-height sliding glazing opens directly onto the pool terrace and tropical garden — seamlessly merging indoor and outdoor living.</p>
             <div class="villa-specs">
               <div class="spec"><div class="spec-val">2</div><div class="spec-lbl" data-en="Bedrooms" data-pt="Quartos">Bedrooms</div></div>
               <div class="spec"><div class="spec-val">2</div><div class="spec-lbl" data-en="Bathrooms" data-pt="Banheiros">Bathrooms</div></div>
               <div class="spec"><div class="spec-val">1</div><div class="spec-lbl" data-en="Garage" data-pt="Garagem">Garage</div></div>
-              <div class="spec"><div class="spec-val">✓</div><div class="spec-lbl" data-en="Private Pool" data-pt="Piscina Privativa">Private Pool</div></div>
+              <div class="spec"><div class="spec-val">Pool</div><div class="spec-lbl" data-en="Private" data-pt="Privativa">Private</div></div>
             </div>
             <span class="plans-label" data-en="Floor Plans" data-pt="Plantas">Floor Plans</span>
             <button class="plan-toggle active" onclick="showPlan('enseada','ground',this)" data-en="Ground Floor" data-pt="Rés-do-chão">Ground Floor</button>
-            <div class="plan-img show" id="enseada-ground">
-              <img src="images/bungalow-plan-ground.jpg" alt="Enseada Ground Floor Plan">
-            </div>
+            <div class="plan-img show" id="enseada-ground"><img src="images/bungalow-plan-ground.jpg" alt="Ground Floor Plan"></div>
           </div>
           <div class="villa-cta">
-            <a href="https://wa.me/5521983005700?text=Hello%20Anatoli%2C%20I%20am%20interested%20in%20the%20Enseada%20Bungalow." target="_blank" class="btn-primary" data-en="Enquire on WhatsApp" data-pt="Consultar no WhatsApp">Enquire on WhatsApp</a>
+            <a href="https://wa.me/5521983005700?text=Hello%20Anatoli%2C%20I%20am%20interested%20in%20the%20Bungalow." target="_blank" class="btn-primary" data-en="Request Information" data-pt="Solicitar Informação">Request Information</a>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- MARCOU TYPE 1 -->
+    <!-- HOUSE 3 SUITES -->
     <div class="villa-panel" id="villa-type1">
       <div class="villa-layout">
         <div class="villa-imgs">
-          <div class="villa-main-img" id="type1-main">
-            <img src="images/type1-cam1.jpg" alt="House 3 Suites">
-          </div>
+          <div class="villa-main-img" id="type1-main"><img src="images/type1-cam1.jpg" alt="House 3 Suites"></div>
           <div class="villa-thumbs">
-            <div class="villa-thumb" onclick="setMain('type1-main','images/type1-cam1.jpg')">
-              <img src="images/type1-cam1.jpg" alt="Type 1 view 1">
-            </div>
-            <div class="villa-thumb" onclick="setMain('type1-main','images/type1-cam2.jpg')">
-              <img src="images/type1-cam2.jpg" alt="Type 1 view 2">
-            </div>
+            <div class="villa-thumb" onclick="setMain('type1-main','images/type1-cam1.jpg')"><img src="images/type1-cam1.jpg" alt="view 1"></div>
+            <div class="villa-thumb" onclick="setMain('type1-main','images/type1-cam2.jpg')"><img src="images/type1-cam2.jpg" alt="view 2"></div>
           </div>
         </div>
         <div class="villa-info">
           <div>
-            <div class="villa-type" data-en="Two Storey · 3 Suites · Home Theater" data-pt="Dois Andares · 3 Suites · Home Theater">Two Storey · 3 Suites · Home Theater</div>
+            <div class="villa-tag" data-en="Two Storey · 3 Suites · Home Theater" data-pt="Dois Andares · 3 Suites · Home Theater">Two Storey · 3 Suites · Home Theater</div>
             <div class="villa-name">House<br>3 Suites</div>
-            <p class="villa-desc" data-en="The House 3 Suites is a striking two-storey villa characterised by its white modernist volume, warm wood cladding and signature red accent elements. The ground floor opens entirely to the pool terrace through full-height sliding doors, while the upper floor hosts three en-suite bedrooms with private balconies." data-pt="O House 3 Suites é uma impressionante villa de dois andares caracterizada pelo seu volume modernista branco, revestimento de madeira quente e elementos de acento vermelho. O rés-do-chão abre totalmente para o terraço da piscina, enquanto o primeiro andar alberga três suites com varandas privativas.">The House 3 Suites is a striking two-storey villa with white modernist volume, warm wood cladding and signature red accents. The ground floor opens entirely to the pool terrace, while the upper floor hosts three en-suite bedrooms with private balconies and a home theater.</p>
+            <p class="villa-desc" data-en="A striking two-storey residence defined by clean modernist volumes, warm timber cladding and signature architectural accents. The ground floor opens entirely to the pool terrace through full-height sliding doors. Three en-suite bedrooms, private balconies and a dedicated home theater on the upper level." data-pt="Uma impressionante residência de dois andares definida por volumes modernistas limpos, revestimento de madeira quente e acentos arquitetônicos característicos. O rés-do-chão abre totalmente para o terraço da piscina. Três suites, varandas privativas e home theater no andar superior.">A striking two-storey residence defined by clean modernist volumes, warm timber cladding and signature architectural accents. The ground floor opens entirely to the pool terrace through full-height sliding doors. Three en-suite bedrooms, private balconies and a dedicated home theater on the upper level.</p>
             <div class="villa-specs">
               <div class="spec"><div class="spec-val">3</div><div class="spec-lbl" data-en="Suites" data-pt="Suites">Suites</div></div>
               <div class="spec"><div class="spec-val">3</div><div class="spec-lbl" data-en="Bathrooms" data-pt="Banheiros">Bathrooms</div></div>
               <div class="spec"><div class="spec-val">2</div><div class="spec-lbl" data-en="Garage" data-pt="Garagem">Garage</div></div>
-              <div class="spec"><div class="spec-val">✓</div><div class="spec-lbl" data-en="Home Theater" data-pt="Home Theater">Home Theater</div></div>
+              <div class="spec"><div class="spec-val">HT</div><div class="spec-lbl" data-en="Home Theater" data-pt="Home Theater">Home Theater</div></div>
             </div>
             <span class="plans-label" data-en="Floor Plans" data-pt="Plantas">Floor Plans</span>
             <button class="plan-toggle active" onclick="showPlan('type1','ground',this)" data-en="Ground Floor" data-pt="Rés-do-chão">Ground Floor</button>
-            <button class="plan-toggle" onclick="showPlan('type1','upper',this)" data-en="Upper Floor" data-pt="Primeiro Andar">Upper Floor</button>
-            <div class="plan-img show" id="type1-ground">
-              <img src="images/type1-plan-ground.jpg" alt="Type 1 Ground Floor Plan">
-            </div>
-            <div class="plan-img" id="type1-upper">
-              <img src="images/type1-plan-upper.jpg" alt="Type 1 Upper Floor Plan">
-            </div>
+            <button class="plan-toggle" onclick="showPlan('type1','upper',this)" data-en="Upper Floor" data-pt="Andar Superior">Upper Floor</button>
+            <div class="plan-img show" id="type1-ground"><img src="images/type1-plan-ground.jpg" alt="Ground Floor Plan"></div>
+            <div class="plan-img" id="type1-upper"><img src="images/type1-plan-upper.jpg" alt="Upper Floor Plan"></div>
           </div>
           <div class="villa-cta">
-            <a href="https://wa.me/5521983005700?text=Hello%20Anatoli%2C%20I%20am%20interested%20in%20the%20Marcou%20Type%201." target="_blank" class="btn-primary" data-en="Enquire on WhatsApp" data-pt="Consultar no WhatsApp">Enquire on WhatsApp</a>
+            <a href="https://wa.me/5521983005700?text=Hello%20Anatoli%2C%20I%20am%20interested%20in%20the%20House%203%20Suites." target="_blank" class="btn-primary" data-en="Request Information" data-pt="Solicitar Informação">Request Information</a>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- MARCOU TYPE 2 -->
+    <!-- HOUSE 4 SUITES -->
     <div class="villa-panel" id="villa-type2">
       <div class="villa-layout">
         <div class="villa-imgs">
-          <div class="villa-main-img" id="type2-main">
-            <img src="images/type2-cam1.jpg" alt="House 4 Suites">
-          </div>
+          <div class="villa-main-img" id="type2-main"><img src="images/type2-cam1.jpg" alt="House 4 Suites"></div>
           <div class="villa-thumbs">
-            <div class="villa-thumb" onclick="setMain('type2-main','images/type2-cam1.jpg')">
-              <img src="images/type2-cam1.jpg" alt="Type 2 view 1">
-            </div>
-            <div class="villa-thumb" onclick="setMain('type2-main','images/type2-cam2.jpg')">
-              <img src="images/type2-cam2.jpg" alt="Type 2 view 2">
-            </div>
+            <div class="villa-thumb" onclick="setMain('type2-main','images/type2-cam1.jpg')"><img src="images/type2-cam1.jpg" alt="view 1"></div>
+            <div class="villa-thumb" onclick="setMain('type2-main','images/type2-cam2.jpg')"><img src="images/type2-cam2.jpg" alt="view 2"></div>
           </div>
         </div>
         <div class="villa-info">
           <div>
-            <div class="villa-type" data-en="Two Storey · 4 Suites · Triple Garage" data-pt="Dois Andares · 4 Suites · Garagem Tripla">Two Storey · 4 Suites · Triple Garage</div>
+            <div class="villa-tag" data-en="Two Storey · Master Suite · Triple Garage" data-pt="Dois Andares · Suite Master · Garagem Tripla">Two Storey · Master Suite · Triple Garage</div>
             <div class="villa-name">House<br>4 Suites</div>
-            <p class="villa-desc" data-en="The House 4 Suites is Anatoli's flagship villa — a spacious two-storey residence featuring a master suite, three additional suites, home theater, gourmet kitchen and oversized pool terrace. The triple garage and dedicated maid's room make this the ideal choice for families seeking the ultimate in space and luxury." data-pt="O House 4 Suites é a villa principal da Anatoli — uma espaçosa residência de dois andares com suite master, três suites adicionais, home theater, cozinha gourmet e generoso terraço de piscina. A garagem tripla e o quarto de serviço tornam esta a escolha ideal para famílias.">The House 4 Suites is Anatoli's flagship villa — a spacious two-storey residence with master suite, three additional suites, home theater, gourmet kitchen and oversized pool terrace. Triple garage and maid's room included.</p>
+            <p class="villa-desc" data-en="Anatoli's flagship residence. A large two-storey family home with master suite, three additional suites, home theater, gourmet kitchen and an oversized pool terrace. The triple garage and dedicated service quarters complete an offering that sets a new benchmark for private living in Brazil." data-pt="A residência principal da Anatoli. Uma grande residência familiar de dois andares com suite master, três suites adicionais, home theater, cozinha gourmet e generoso terraço de piscina. A garagem tripla e o quarto de serviço estabelecem um novo benchmark para a vida privada no Brasil.">Anatoli's flagship residence. A large two-storey family home with master suite, three additional suites, home theater, gourmet kitchen and an oversized pool terrace. The triple garage and dedicated service quarters set a new benchmark for private living in Brazil.</p>
             <div class="villa-specs">
               <div class="spec"><div class="spec-val">4</div><div class="spec-lbl" data-en="Suites" data-pt="Suites">Suites</div></div>
               <div class="spec"><div class="spec-val">4</div><div class="spec-lbl" data-en="Bathrooms" data-pt="Banheiros">Bathrooms</div></div>
               <div class="spec"><div class="spec-val">3</div><div class="spec-lbl" data-en="Garage" data-pt="Garagem">Garage</div></div>
-              <div class="spec"><div class="spec-val">✓</div><div class="spec-lbl" data-en="Gourmet Kitchen" data-pt="Cozinha Gourmet">Gourmet Kitchen</div></div>
+              <div class="spec"><div class="spec-val">GK</div><div class="spec-lbl" data-en="Gourmet Kitchen" data-pt="Cozinha Gourmet">Gourmet Kitchen</div></div>
             </div>
             <span class="plans-label" data-en="Floor Plans" data-pt="Plantas">Floor Plans</span>
             <button class="plan-toggle active" onclick="showPlan('type2','ground',this)" data-en="Ground Floor" data-pt="Rés-do-chão">Ground Floor</button>
-            <button class="plan-toggle" onclick="showPlan('type2','upper',this)" data-en="Upper Floor" data-pt="Primeiro Andar">Upper Floor</button>
-            <div class="plan-img show" id="type2-ground">
-              <img src="images/type2-plan-ground.jpg" alt="Type 2 Ground Floor Plan">
-            </div>
-            <div class="plan-img" id="type2-upper">
-              <img src="images/type2-plan-upper.jpg" alt="Type 2 Upper Floor Plan">
-            </div>
+            <button class="plan-toggle" onclick="showPlan('type2','upper',this)" data-en="Upper Floor" data-pt="Andar Superior">Upper Floor</button>
+            <div class="plan-img show" id="type2-ground"><img src="images/type2-plan-ground.jpg" alt="Ground Floor Plan"></div>
+            <div class="plan-img" id="type2-upper"><img src="images/type2-plan-upper.jpg" alt="Upper Floor Plan"></div>
           </div>
           <div class="villa-cta">
-            <a href="https://wa.me/5521983005700?text=Hello%20Anatoli%2C%20I%20am%20interested%20in%20the%20Marcou%20Type%202." target="_blank" class="btn-primary" data-en="Enquire on WhatsApp" data-pt="Consultar no WhatsApp">Enquire on WhatsApp</a>
+            <a href="https://wa.me/5521983005700?text=Hello%20Anatoli%2C%20I%20am%20interested%20in%20the%20House%204%20Suites." target="_blank" class="btn-primary" data-en="Request Information" data-pt="Solicitar Informação">Request Information</a>
           </div>
         </div>
       </div>
@@ -504,114 +459,74 @@ footer{background:var(--txt);color:var(--sand);padding:56px 60px 32px;}
 
 <!-- AMENITIES -->
 <section id="amenities">
-  <div class="amenities-bg"><img src="images/marica-park.jpg" alt=""></div>
-  <div class="mw" style="position:relative;z-index:1;">
-    <div class="eyebrow" data-en="04 — Life at Anatoli" data-pt="04 — A Vida na Anatoli">04 — Life at Anatoli</div>
-    <h2 class="section-title" data-en="Resort-level<br><em>amenities</em>" data-pt="Amenidades<br><em>nível resort</em>">Resort-level<br><em>amenities</em></h2>
-    <div class="rule"></div>
+  <div class="mw">
+    <div class="amen-intro">
+      <div>
+        <span class="eyebrow" data-en="04 — The Experience" data-pt="04 — A Experiência">04 — The Experience</span>
+        <h2 class="section-title" data-en="Resort living.<br><em>Private ownership.</em>" data-pt="Vida de resort.<br><em>Propriedade privada.</em>">Resort living.<br><em>Private ownership.</em></h2>
+        <div class="rule"></div>
+      </div>
+      <p class="body-text" data-en="Every Anatoli residence comes with access to a full resort amenity programme — designed for those who expect more than a house. The estate is a complete lifestyle environment, from the lagoon to the clubhouse." data-pt="Cada residência Anatoli vem com acesso a um programa completo de amenidades resort — projetado para aqueles que esperam mais do que uma casa. O condomínio é um ambiente de estilo de vida completo, da lagoa ao clube.">Every Anatoli residence comes with access to a full resort amenity programme — designed for those who expect more than a house. The estate is a complete lifestyle environment, from the lagoon to the clubhouse.</p>
+    </div>
     <div class="amen-grid">
-      <div class="amen-item"><div class="amen-icon">🏊</div><div class="amen-name" data-en="Swimming Pool" data-pt="Piscina">Swimming Pool</div><p class="amen-desc" data-en="Shared resort pool with sun deck in addition to each villa's private pool." data-pt="Piscina resort compartilhada com deck solário, além da piscina privativa de cada villa.">Shared resort pool with sun deck in addition to each villa's private pool.</p></div>
-      <div class="amen-item"><div class="amen-icon">🧘</div><div class="amen-name" data-en="Spa & Fitness" data-pt="Spa & Fitness">Spa & Fitness</div><p class="amen-desc" data-en="Full spa and fitness centre within the estate for residents and hotel guests." data-pt="Spa e centro de fitness completo no condomínio para residentes e hóspedes do hotel.">Full spa and fitness centre within the estate for residents and hotel guests.</p></div>
-      <div class="amen-item"><div class="amen-icon">🏠</div><div class="amen-name" data-en="Club House" data-pt="Club House">Club House</div><p class="amen-desc" data-en="Exclusive residents clubhouse with event spaces, lounge and reception services." data-pt="Clube exclusivo para residentes com espaços de eventos, lounge e serviços de recepção.">Exclusive residents clubhouse with event spaces, lounge and reception services.</p></div>
-      <div class="amen-item"><div class="amen-icon">⛵</div><div class="amen-name" data-en="Floating Pier" data-pt="Pier Flutuante">Floating Pier</div><p class="amen-desc" data-en="Private floating pier on the lagoon waterfront — direct water access for residents." data-pt="Pier flutuante privativo na orla da lagoa — acesso direto à água para residentes.">Private floating pier on the lagoon waterfront — direct water access for residents.</p></div>
-      <div class="amen-item"><div class="amen-icon">🏐</div><div class="amen-name" data-en="Beach Volleyball" data-pt="Vôlei de Praia">Beach Volleyball</div><p class="amen-desc" data-en="Beach volleyball courts at the lagoon's edge within the nature reserve." data-pt="Quadras de vôlei de praia à beira da lagoa dentro da reserva natural.">Beach volleyball courts at the lagoon's edge within the nature reserve.</p></div>
-      <div class="amen-item"><div class="amen-icon">🍖</div><div class="amen-name" data-en="Barbecue Areas" data-pt="Churrasqueiras">Barbecue Areas</div><p class="amen-desc" data-en="Communal barbecue and outdoor dining areas for residents to enjoy together." data-pt="Churrasqueiras e áreas de refeição ao ar livre para os residentes desfrutarem.">Communal barbecue and outdoor dining areas for residents to enjoy together.</p></div>
-      <div class="amen-item"><div class="amen-icon">🛝</div><div class="amen-name" data-en="Playground" data-pt="Parque Infantil">Playground</div><p class="amen-desc" data-en="Safe, landscaped children's playground within the secured estate." data-pt="Parque infantil seguro e paisagístico dentro do condomínio fechado.">Safe, landscaped children's playground within the secured estate.</p></div>
-      <div class="amen-item"><div class="amen-icon">🌲</div><div class="amen-name" data-en="Nature Reserve" data-pt="Reserva Natural">Nature Reserve</div><p class="amen-desc" data-en="The estate borders a protected nature reserve — permanent green belt and privacy." data-pt="O condomínio faz fronteira com uma reserva natural protegida — cinturão verde permanente.">The estate borders a protected nature reserve — permanent green belt and privacy.</p></div>
+      <div class="amen-item"><div class="amen-num">01</div><div class="amen-name" data-en="Swimming Pool" data-pt="Piscina">Swimming Pool</div><p class="amen-desc" data-en="Resort-scale shared pool with sun terrace, in addition to each residence's private pool." data-pt="Piscina compartilhada de escala resort com terraço solário, além da piscina privativa de cada residência.">Resort-scale shared pool with sun terrace, in addition to each residence's private pool.</p></div>
+      <div class="amen-item"><div class="amen-num">02</div><div class="amen-name" data-en="Spa & Fitness" data-pt="Spa & Fitness">Spa & Fitness</div><p class="amen-desc" data-en="Full spa and fitness facilities for residents, within the secured estate." data-pt="Instalações completas de spa e fitness para residentes, dentro do condomínio fechado.">Full spa and fitness facilities for residents, within the secured estate.</p></div>
+      <div class="amen-item"><div class="amen-num">03</div><div class="amen-name" data-en="Club House" data-pt="Club House">Club House</div><p class="amen-desc" data-en="Exclusive residents clubhouse with event spaces, lounge and concierge services." data-pt="Clube exclusivo para residentes com espaços de eventos, lounge e serviços de concierge.">Exclusive residents clubhouse with event spaces, lounge and concierge services.</p></div>
+      <div class="amen-item"><div class="amen-num">04</div><div class="amen-name" data-en="Floating Pier" data-pt="Pier Flutuante">Floating Pier</div><p class="amen-desc" data-en="Private floating pier on the lagoon — direct water access for residents of the estate." data-pt="Pier flutuante privativo na lagoa — acesso direto à água para os residentes do condomínio.">Private floating pier on the lagoon — direct water access for residents of the estate.</p></div>
+      <div class="amen-item"><div class="amen-num">05</div><div class="amen-name" data-en="Beach Volleyball" data-pt="Vôlei de Praia">Beach Volleyball</div><p class="amen-desc" data-en="Courts at the lagoon's edge within the protected nature reserve boundary." data-pt="Quadras à beira da lagoa dentro do limite da reserva natural protegida.">Courts at the lagoon's edge within the protected nature reserve boundary.</p></div>
+      <div class="amen-item"><div class="amen-num">06</div><div class="amen-name" data-en="Barbecue Areas" data-pt="Churrasqueiras">Barbecue Areas</div><p class="amen-desc" data-en="Landscaped communal barbecue and outdoor dining spaces throughout the estate." data-pt="Churrasqueiras comunitárias paisagísticas e espaços de refeição ao ar livre em todo o condomínio.">Landscaped communal barbecue and outdoor dining spaces throughout the estate.</p></div>
+      <div class="amen-item"><div class="amen-num">07</div><div class="amen-name" data-en="24h Security" data-pt="Segurança 24h">24h Security</div><p class="amen-desc" data-en="Controlled access, perimeter security and round-the-clock monitoring across the entire estate." data-pt="Acesso controlado, segurança perimetral e monitoramento ininterrupto em todo o condomínio.">Controlled access, perimeter security and round-the-clock monitoring across the entire estate.</p></div>
+      <div class="amen-item"><div class="amen-num">08</div><div class="amen-name" data-en="Nature Reserve" data-pt="Reserva Natural">Nature Reserve</div><p class="amen-desc" data-en="The estate borders a protected reserve — a permanent green belt ensuring privacy and biodiversity." data-pt="O condomínio faz fronteira com uma reserva protegida — um cinturão verde permanente garantindo privacidade e biodiversidade.">The estate borders a protected reserve — a permanent green belt ensuring privacy and biodiversity.</p></div>
     </div>
   </div>
 </section>
 
-<!-- WHY MARICA -->
+<!-- WHY BRAZIL -->
 <section id="why">
   <div class="mw">
-    <div class="eyebrow" data-en="05 — The Location" data-pt="05 — A Localização">05 — The Location</div>
-    <h2 class="section-title" data-en="Why Maricá.<br><em>Why now.</em>" data-pt="Por que Maricá.<br><em>Por que agora.</em>">Why Maricá.<br><em>Why now.</em></h2>
+    <span class="eyebrow" data-en="05 — The Investment" data-pt="05 — O Investimento">05 — The Investment</span>
+    <h2 class="section-title" data-en="Why Brazil.<br><em>Why now.</em>" data-pt="Por que o Brasil.<br><em>Por que agora.</em>">Why Brazil.<br><em>Why now.</em></h2>
     <div class="rule"></div>
     <div class="why-grid">
       <div class="why-img-wrap">
         <img src="images/marica-sunset.jpg" alt="Maricá sunset">
         <div class="why-badge">
           <div class="why-badge-val">#1</div>
-          <div class="why-badge-lbl" data-en="Real estate market in Latin America" data-pt="Mercado imobiliário na América Latina">Real estate market in Latin America</div>
+          <div class="why-badge-lbl" data-en="Real estate market<br>in Latin America" data-pt="Mercado imobiliário<br>na América Latina">Real estate market<br>in Latin America</div>
         </div>
       </div>
       <div class="why-points">
-        <div class="why-point">
-          <div class="why-num">01</div>
-          <div>
-            <div class="why-pt-title" data-en="Fastest-growing municipality in Rio state" data-pt="Município de crescimento mais rápido no estado do Rio">Fastest-growing municipality in Rio state</div>
-            <p class="why-pt-body" data-en="Maricá's GDP grew over 12% annually — driven by Petrobras infrastructure investment and one of the most unspoilt coastlines in Southeast Brazil." data-pt="O PIB de Maricá cresceu mais de 12% ao ano — impulsionado pelo investimento de infraestrutura da Petrobras e um dos litorais mais preservados do Sudeste do Brasil.">Maricá's GDP grew over 12% annually — driven by Petrobras infrastructure investment and one of the most unspoilt coastlines in Southeast Brazil.</p>
-          </div>
-        </div>
-        <div class="why-point">
-          <div class="why-num">02</div>
-          <div>
-            <div class="why-pt-title" data-en="Undervalued vs comparable coastal markets" data-pt="Subvalorizado vs mercados costeiros comparáveis">Undervalued vs comparable coastal markets</div>
-            <p class="why-pt-body" data-en="Comparable coastal property in Southern Europe or the Caribbean trades at 5–10x the price of equivalent Maricá locations. You are buying at the beginning of the curve." data-pt="Propriedades costeiras comparáveis no sul da Europa ou no Caribe negociam a 5–10x o preço de localizações equivalentes em Maricá. Você está comprando no início da curva.">Comparable coastal property in Southern Europe or the Caribbean trades at 5–10x the price of equivalent Maricá locations. You are buying at the beginning of the curve.</p>
-          </div>
-        </div>
-        <div class="why-point">
-          <div class="why-num">03</div>
-          <div>
-            <div class="why-pt-title" data-en="Infrastructure wave already underway" data-pt="Onda de infraestrutura já em curso">Infrastructure wave already underway</div>
-            <p class="why-pt-body" data-en="Federal and state governments are investing heavily in the Rio–Maricá corridor. Roads already built on site. The time to buy is before the highway arrives." data-pt="Os governos federal e estadual estão investindo pesadamente no corredor Rio–Maricá. Estradas já construídas no local. O momento de comprar é antes da rodovia chegar.">Federal and state governments are investing heavily in the Rio–Maricá corridor. Roads already built on site. The time to buy is before the highway arrives.</p>
-          </div>
-        </div>
-        <div class="why-point">
-          <div class="why-num">04</div>
-          <div>
-            <div class="why-pt-title" data-en="Exceptional FX opportunity for EUR/USD buyers" data-pt="Oportunidade excepcional de câmbio para compradores EUR/USD">Exceptional FX opportunity for EUR/USD buyers</div>
-            <p class="why-pt-body" data-en="For European and American buyers, the current exchange rate means Brazilian luxury real estate represents outstanding purchasing power — hard assets priced in a historically weaker currency." data-pt="Para compradores europeus e americanos, a taxa de câmbio atual significa que o imóvel de luxo brasileiro representa um poder de compra excepcional — ativos reais numa moeda historicamente mais fraca.">For European and American buyers, the current exchange rate means outstanding purchasing power — hard assets priced in a historically weaker currency.</p>
-          </div>
-        </div>
+        <div class="why-point"><div class="why-num">01</div><div><div class="why-pt-title" data-en="Brazil's fastest-growing coastal market" data-pt="Mercado costeiro de crescimento mais rápido do Brasil">Brazil's fastest-growing coastal market</div><p class="why-pt-body" data-en="Maricá's GDP has grown over 12% annually, driven by major Petrobras infrastructure investment and the expansion of the Rio–Maricá corridor. The fundamentals are in place — the opportunity is now." data-pt="O PIB de Maricá cresceu mais de 12% ao ano, impulsionado por grandes investimentos da Petrobras e a expansão do corredor Rio–Maricá. Os fundamentos estão no lugar — a oportunidade é agora.">Maricá's GDP has grown over 12% annually, driven by major Petrobras infrastructure investment and the expansion of the Rio–Maricá corridor. The fundamentals are in place — the opportunity is now.</p></div></div>
+        <div class="why-point"><div class="why-num">02</div><div><div class="why-pt-title" data-en="Undervalued against global comparables" data-pt="Subvalorizado face a comparáveis globais">Undervalued against global comparables</div><p class="why-pt-body" data-en="Coastal property in Southern Europe or Southeast Asia trades at 5–10x the price of equivalent Brazilian locations. For international buyers, the value proposition is exceptional — and the window is narrowing." data-pt="Propriedades costeiras no sul da Europa ou no Sudeste Asiático negociam a 5–10x o preço de localizações brasileiras equivalentes. Para compradores internacionais, a proposta de valor é excepcional.">Coastal property in Southern Europe or Southeast Asia trades at 5–10x the price of equivalent Brazilian locations. For international buyers, the value proposition is exceptional — and the window is narrowing.</p></div></div>
+        <div class="why-point"><div class="why-num">03</div><div><div class="why-pt-title" data-en="Infrastructure already under construction" data-pt="Infraestrutura já em construção">Infrastructure already under construction</div><p class="why-pt-body" data-en="Federal and state investment in the Rio–Maricá corridor is already underway. Roads are built on site. The time to enter a market is before the infrastructure arrives — not after." data-pt="O investimento federal e estadual no corredor Rio–Maricá já está em curso. Estradas estão construídas no local. O momento de entrar num mercado é antes da infraestrutura chegar — não depois.">Federal and state investment in the Rio–Maricá corridor is already underway. Roads are built on site. The time to enter a market is before the infrastructure arrives — not after.</p></div></div>
+        <div class="why-point"><div class="why-num">04</div><div><div class="why-pt-title" data-en="Exceptional FX advantage for EUR & USD buyers" data-pt="Excepcional vantagem cambial para compradores EUR e USD">Exceptional FX advantage for EUR & USD buyers</div><p class="why-pt-body" data-en="For European and American investors, the current exchange rate represents outstanding purchasing power. Hard assets in a growing economy — priced in a historically weaker currency." data-pt="Para investidores europeus e americanos, a taxa de câmbio atual representa um poder de compra excepcional. Ativos reais numa economia crescente — precificados numa moeda historicamente mais fraca.">For European and American investors, the current exchange rate represents outstanding purchasing power. Hard assets in a growing economy — priced in a historically weaker currency.</p></div></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- LOCATION PHOTO STRIP -->
-<div class="location-strip">
-  <div class="mw">
-    <div class="loc-photo">
-      <img src="images/marica-aerial.jpg" alt="Maricá coastline">
-      <div class="loc-label">
-        <div class="loc-label-title" data-en="Maricá Coastline" data-pt="Litoral de Maricá">Maricá Coastline</div>
-        <div class="loc-label-sub" data-en="50km from Rio de Janeiro" data-pt="50km do Rio de Janeiro">50km from Rio de Janeiro</div>
-      </div>
-    </div>
-    <div class="loc-photo">
-      <img src="images/marica-lagoon.jpg" alt="Maricá lagoon">
-      <div class="loc-label">
-        <div class="loc-label-title" data-en="Lagoon & Nature" data-pt="Lagoa & Natureza">Lagoon & Nature</div>
-        <div class="loc-label-sub" data-en="Protected nature reserve" data-pt="Reserva natural protegida">Protected nature reserve</div>
-      </div>
-    </div>
-    <div class="loc-photo">
-      <img src="images/marica-beach.jpg" alt="Maricá beach">
-      <div class="loc-label">
-        <div class="loc-label-title" data-en="Unspoilt Beaches" data-pt="Praias Preservadas">Unspoilt Beaches</div>
-        <div class="loc-label-sub" data-en="Some of Brazil's finest" data-pt="Algumas das melhores do Brasil">Some of Brazil's finest</div>
-      </div>
-    </div>
-  </div>
+<!-- LOCATION STRIP -->
+<div class="loc-strip">
+  <div class="loc-img"><img src="images/marica-aerial.jpg" alt="Maricá coastline"><div class="loc-label"><div class="loc-title" data-en="Maricá Coastline" data-pt="Litoral de Maricá">Maricá Coastline</div><div class="loc-sub" data-en="50km from Rio de Janeiro" data-pt="50km do Rio de Janeiro">50km from Rio de Janeiro</div></div></div>
+  <div class="loc-img"><img src="images/marica-lagoon.jpg" alt="Lagoon"><div class="loc-label"><div class="loc-title" data-en="The Lagoon" data-pt="A Lagoa">The Lagoon</div><div class="loc-sub" data-en="Protected nature reserve" data-pt="Reserva natural protegida">Protected nature reserve</div></div></div>
+  <div class="loc-img"><img src="images/marica-park.jpg" alt="Nature"><div class="loc-label"><div class="loc-title" data-en="Natural Environment" data-pt="Ambiente Natural">Natural Environment</div><div class="loc-sub" data-en="Unspoilt tropical landscape" data-pt="Paisagem tropical preservada">Unspoilt tropical landscape</div></div></div>
 </div>
 
 <!-- CONTACT -->
 <section id="contact">
   <div class="mw">
-    <div class="contact-wrap">
+    <div class="contact-grid">
       <div>
-        <div class="eyebrow" data-en="06 — Contact" data-pt="06 — Contacto">06 — Contact</div>
-        <h2 class="section-title" data-en="Talk to us<br><em>directly</em>" data-pt="Fale connosco<br><em>diretamente</em>">Talk to us<br><em>directly</em></h2>
+        <span class="eyebrow" data-en="06 — Contact" data-pt="06 — Contacto">06 — Contact</span>
+        <h2 class="section-title" data-en="Speak with<br>the <em>team</em><br>directly." data-pt="Fale com<br>a <em>equipa</em><br>diretamente.">Speak with<br>the <em>team</em><br>directly.</h2>
         <div class="rule"></div>
-        <p class="body-text" style="margin-bottom:36px;" data-en="Whether you're an investor, a buyer or a sales agent — we respond to all enquiries personally. No automated responses, no intermediaries. Contact us on WhatsApp for the fastest response." data-pt="Seja você um investidor, comprador ou agente de vendas — respondemos a todas as consultas pessoalmente. Sem respostas automatizadas. Contacte-nos no WhatsApp para resposta mais rápida.">Whether you're an investor, a buyer or a sales agent — we respond to all enquiries personally. No automated responses, no intermediaries.</p>
+        <p class="body-text" style="margin-bottom:40px;" data-en="We respond to all enquiries personally — no automated responses, no intermediaries. Whether you are an investor, a buyer or a sales partner, contact us directly for a conversation." data-pt="Respondemos a todas as consultas pessoalmente — sem respostas automatizadas, sem intermediários. Seja você um investidor, comprador ou parceiro de vendas, contacte-nos diretamente para uma conversa.">We respond to all enquiries personally — no automated responses, no intermediaries. Whether you are an investor, a buyer or a sales partner, contact us directly for a conversation.</p>
         <div class="contact-info">
           <div><div class="ci-label">Email</div><div class="ci-val"><a href="mailto:contact@anatoli.com.br">contact@anatoli.com.br</a></div></div>
           <div><div class="ci-label">WhatsApp</div><div class="ci-val"><a href="https://wa.me/5521983005700" target="_blank">+55 21 98300-5700</a></div></div>
-          <div><div class="ci-label" data-en="Location" data-pt="Localização">Location</div><div class="ci-val">Maricá · Rio de Janeiro · Brazil</div></div>
-          <a href="https://wa.me/5521983005700?text=Hello%20Anatoli%2C%20I%20would%20like%20to%20know%20more%20about%20your%20villas%20in%20Maric%C3%A1." target="_blank" class="wa-btn">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          <div><div class="ci-label" data-en="Location" data-pt="Localização">Location</div><div class="ci-val" style="font-size:14px;color:rgba(245,240,232,.45);">Maricá · Rio de Janeiro · Brazil</div></div>
+          <a href="https://wa.me/5521983005700?text=Hello%20Anatoli%2C%20I%20would%20like%20to%20know%20more%20about%20your%20development%20in%20Maric%C3%A1." target="_blank" class="wa-btn">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
             <span data-en="Chat on WhatsApp" data-pt="Falar no WhatsApp">Chat on WhatsApp</span>
           </a>
         </div>
@@ -627,15 +542,15 @@ footer{background:var(--txt);color:var(--sand);padding:56px 60px 32px;}
           <label class="fl" data-en="I am interested in..." data-pt="Estou interessado em...">I am interested in...</label>
           <select>
             <option data-en="Bungalow" data-pt="Bungalow">Bungalow</option>
-            <option data-en="House 3 Suites" data-pt="House 3 Suites">House 3 Suites</option>
-            <option data-en="House 4 Suites" data-pt="House 4 Suites">House 4 Suites</option>
-            <option data-en="General information" data-pt="Informação geral">General information</option>
+            <option data-en="House — 3 Suites" data-pt="House — 3 Suites">House — 3 Suites</option>
+            <option data-en="House — 4 Suites" data-pt="House — 4 Suites">House — 4 Suites</option>
+            <option data-en="General investment information" data-pt="Informação geral de investimento">General investment information</option>
             <option data-en="Sales partnership" data-pt="Parceria comercial">Sales partnership</option>
           </select>
         </div>
         <div><label class="fl" data-en="Message" data-pt="Mensagem">Message</label><textarea></textarea></div>
         <button type="submit" class="form-submit" data-en="Send Enquiry" data-pt="Enviar Consulta">Send Enquiry</button>
-        <p class="form-note" id="form-note" data-en="We typically respond within 24 hours." data-pt="Respondemos normalmente em 24 horas.">We typically respond within 24 hours.</p>
+        <p class="form-note" id="form-note" data-en="We respond to all enquiries within 24 hours." data-pt="Respondemos a todas as consultas em 24 horas.">We respond to all enquiries within 24 hours.</p>
       </form>
     </div>
   </div>
@@ -647,26 +562,26 @@ footer{background:var(--txt);color:var(--sand);padding:56px 60px 32px;}
     <div class="footer-top">
       <div>
         <div class="footer-brand">ANATO<span>L</span>I</div>
-        <p class="footer-sub" data-en="Premium gated community in Maricá, Rio de Janeiro. Luxury villas with private pools. Brazilian registered entity." data-pt="Condomínio fechado premium em Maricá, Rio de Janeiro. Villas de luxo com piscinas privativas. Entidade registrada no Brasil.">Premium gated community in Maricá, Rio de Janeiro. Luxury villas with private pools. Brazilian registered entity.</p>
+        <p class="footer-sub" data-en="Premium real estate developer in Brazil. Creating luxury gated communities for lifestyle investors and high-net-worth individuals. Registered Brazilian entity." data-pt="Incorporadora imobiliária premium no Brasil. Criando condomínios fechados de luxo para investidores de estilo de vida. Entidade registrada no Brasil.">Premium real estate developer in Brazil. Creating luxury gated communities for lifestyle investors and high-net-worth individuals. Registered Brazilian entity.</p>
       </div>
       <div class="footer-col">
         <div class="footer-col-title" data-en="The Villas" data-pt="As Villas">The Villas</div>
         <a href="#villas">Bungalow</a>
-        <a href="#villas" data-en="House 3 Suites" data-pt="House 3 Suites">House 3 Suites</a>
-        <a href="#villas" data-en="House 4 Suites" data-pt="House 4 Suites">House 4 Suites</a>
+        <a href="#villas" data-en="House — 3 Suites" data-pt="House — 3 Suites">House — 3 Suites</a>
+        <a href="#villas" data-en="House — 4 Suites" data-pt="House — 4 Suites">House — 4 Suites</a>
       </div>
       <div class="footer-col">
         <div class="footer-col-title" data-en="Information" data-pt="Informação">Information</div>
         <a href="#about" data-en="About Anatoli" data-pt="Sobre a Anatoli">About Anatoli</a>
         <a href="#masterplan">Masterplan</a>
         <a href="#amenities" data-en="Amenities" data-pt="Amenidades">Amenities</a>
-        <a href="#why" data-en="Why Maricá" data-pt="Por que Maricá">Why Maricá</a>
+        <a href="#why" data-en="Why Brazil" data-pt="Por que Brasil">Why Brazil</a>
       </div>
       <div class="footer-col">
         <div class="footer-col-title" data-en="Contact" data-pt="Contacto">Contact</div>
         <p>contact@anatoli.com.br</p>
         <p>+55 21 98300-5700</p>
-        <p>Maricá, Rio de Janeiro<br>Brazil</p>
+        <p>Maricá · Rio de Janeiro<br>Brazil</p>
       </div>
     </div>
     <div class="footer-bot">
@@ -681,13 +596,13 @@ footer{background:var(--txt);color:var(--sand);padding:56px 60px 32px;}
 </footer>
 
 <!-- FLOAT WA -->
-<a href="https://wa.me/5521983005700?text=Hello%20Anatoli%2C%20I%20am%20interested%20in%20your%20Maric%C3%A1%20villas." class="waf" target="_blank" aria-label="WhatsApp">
+<a href="https://wa.me/5521983005700?text=Hello%20Anatoli%2C%20I%20am%20interested%20in%20your%20development%20in%20Maric%C3%A1." class="waf" target="_blank" aria-label="WhatsApp">
   <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
 </a>
 
 <script>
 window.addEventListener('scroll',()=>{
-  document.getElementById('hd').classList.toggle('scrolled',window.scrollY>40);
+  document.getElementById('hd').classList.toggle('scrolled',window.scrollY>60);
 });
 document.querySelectorAll('a[href^="#"]').forEach(a=>{
   a.addEventListener('click',e=>{
@@ -730,7 +645,7 @@ function showPlan(villa,floor,btn){
 function handleForm(e){
   e.preventDefault();
   const n=document.getElementById('form-note');
-  n.style.color='#2D6A4F';
+  n.style.color='var(--warm)';
   n.style.fontWeight='500';
   n.textContent='Thank you — we will be in touch within 24 hours.';
 }
