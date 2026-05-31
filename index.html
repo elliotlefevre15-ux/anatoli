@@ -22,7 +22,7 @@ img{display:block;width:100%;height:100%;object-fit:cover;}
 video{display:block;width:100%;height:100%;object-fit:cover;}
 
 /* HEADER */
-header{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:0 56px;height:78px;background:rgba(250,246,239,.97);backdrop-filter:blur(16px);border-bottom:1px solid var(--ln);transition:all .3s;}
+header{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:0 56px;height:78px;background:rgba(250,246,239,1);backdrop-filter:blur(20px);border-bottom:1px solid var(--ln);box-shadow:0 1px 24px rgba(28,23,16,.07);transition:all .3s;}
 header.scrolled{box-shadow:0 2px 20px rgba(28,23,16,.06);}
 .logo-wrap{display:flex;align-items:center;gap:14px;text-decoration:none;}
 .logo-img{height:48px;width:48px;object-fit:contain;border-radius:0;}
@@ -98,7 +98,7 @@ section{padding:108px 56px;}
 
 /* VILLA */
 #villa{background:var(--white);}
-.villa-hero{display:grid;grid-template-columns:1fr 1fr;margin-top:48px;border:1px solid var(--ln);}
+.villa-hero{display:grid;grid-template-columns:1fr 1fr;margin-top:48px;border:1px solid var(--ln);border-left:none;}
 .villa-imgs{display:flex;flex-direction:column;}
 .villa-main{height:480px;overflow:hidden;position:relative;background:var(--cream2);}
 .villa-main img{width:100%;height:100%;object-fit:cover;transition:transform .8s;}
@@ -184,15 +184,25 @@ footer{background:var(--txt);color:var(--sand);padding:60px 56px 32px;}
 .ft-brand{display:flex;align-items:center;gap:12px;margin-bottom:16px;}
 .ft-logo{width:36px;height:36px;object-fit:contain;}
 .ft-name{font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:400;letter-spacing:.24em;color:var(--gold);text-transform:uppercase;}
-.ft-sub{font-size:13px;color:rgba(200,180,150,.4);line-height:1.78;max-width:240px;font-weight:300;}
+.ft-sub{font-size:13px;color:rgba(220,205,175,.58);line-height:1.78;max-width:240px;font-weight:300;}
 .ft-ct{font-size:9px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;}
-.ft-col a,.ft-col p{display:block;font-size:13px;color:rgba(200,180,150,.35);text-decoration:none;transition:color .2s;margin-bottom:10px;font-weight:300;}
+.ft-col a,.ft-col p{display:block;font-size:13px;color:rgba(220,205,175,.65);text-decoration:none;transition:color .2s;margin-bottom:10px;font-weight:300;}
 .ft-col a:hover{color:rgba(200,180,150,.75);}
 .ft-bot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;padding-top:24px;}
-.ft-copy{font-size:10px;color:rgba(200,180,150,.2);}
+.ft-copy{font-size:10px;color:rgba(220,205,175,.4);}
 .ft-links{display:flex;gap:22px;}
-.ft-links a{font-size:10px;color:rgba(200,180,150,.2);text-decoration:none;transition:color .2s;}
+.ft-links a{font-size:10px;color:rgba(220,205,175,.4);text-decoration:none;transition:color .2s;}
 .ft-links a:hover{color:rgba(200,180,150,.6);}
+
+
+/* LIGHTBOX */
+.lightbox-overlay{display:none;position:fixed;inset:0;z-index:9999;background:rgba(28,23,16,.92);align-items:center;justify-content:center;cursor:pointer;}
+.lightbox-overlay.open{display:flex;}
+.lightbox-inner{position:relative;max-width:90vw;max-height:90vh;}
+.lightbox-inner img{max-width:90vw;max-height:85vh;object-fit:contain;display:block;box-shadow:0 8px 48px rgba(0,0,0,.4);}
+.lightbox-close{position:absolute;top:-16px;right:-16px;width:36px;height:36px;background:var(--gold);color:var(--white);border:none;border-radius:50%;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;font-family:'Jost',sans-serif;line-height:1;}
+.plan-box img{cursor:zoom-in;}
+.plan-box img:hover{opacity:.92;}
 
 /* FLOAT WA */
 .waf{position:fixed;bottom:28px;right:28px;z-index:997;width:54px;height:54px;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 4px 20px rgba(184,147,90,.35);transition:transform .25s,background .25s;}
@@ -226,7 +236,7 @@ footer{background:var(--txt);color:var(--sand);padding:60px 56px 32px;}
 <!-- HEADER -->
 <header id="hd">
   <a href="#" class="logo-wrap">
-    <img src="images/logo.jpg" alt="Anatoli" class="logo-img">
+    <img src="images/logo.png" alt="Anatoli" class="logo-img">
     <span class="logo-text">Anatoli</span>
   </a>
   <nav>
@@ -252,7 +262,7 @@ footer{background:var(--txt);color:var(--sand);padding:60px 56px 32px;}
   </div>
   <div class="hero-ov"></div>
   <div class="hero-c">
-    <img src="images/logo.jpg" alt="Anatoli" class="hero-logo">
+    <img src="images/logo.png" alt="Anatoli" class="hero-logo">
     <span class="hero-tag" data-en="Premium Real Estate Developer — Brazil" data-pt="Incorporadora Imobiliária Premium — Brasil">Premium Real Estate Developer — Brazil</span>
     <h1 class="hero-title" data-en="Creating Brazil's<br>next <em>luxury</em><br>destination." data-pt="Criando o próximo<br>destino de <em>luxo</em><br>do Brasil.">Creating Brazil's<br>next <em>luxury</em><br>destination.</h1>
     <p class="hero-sub" data-en="Anatoli develops premium gated communities for lifestyle investors and high-net-worth individuals. Maricá, Rio de Janeiro." data-pt="A Anatoli desenvolve condomínios fechados premium para investidores de estilo de vida. Maricá, Rio de Janeiro.">Anatoli develops premium gated communities for lifestyle investors and high-net-worth individuals. Maricá, Rio de Janeiro.</p>
@@ -325,8 +335,8 @@ footer{background:var(--txt);color:var(--sand);padding:60px 56px 32px;}
           <span class="plans-title" data-en="Floor Plans" data-pt="Plantas">Floor Plans</span>
           <button class="plan-btn on" onclick="showPlan('ground',this)" data-en="Ground Floor" data-pt="Rés-do-chão">Ground Floor</button>
           <button class="plan-btn" onclick="showPlan('upper',this)" data-en="Upper Floor" data-pt="Andar Superior">Upper Floor</button>
-          <div class="plan-box show" id="plan-ground"><img src="images/type1-plan-ground.jpg" alt="Ground Floor Plan"></div>
-          <div class="plan-box" id="plan-upper"><img src="images/type1-plan-upper.jpg" alt="Upper Floor Plan"></div>
+          <div class="plan-box show" id="plan-ground"><img src="images/type1-plan-ground.jpg" alt="Ground Floor Plan" onclick="openLightbox('images/type1-plan-ground.jpg')"></div>
+          <div class="plan-box" id="plan-upper"><img src="images/type1-plan-upper.jpg" alt="Upper Floor Plan" onclick="openLightbox('images/type1-plan-upper.jpg')"></div>
         </div>
         <div style="margin-top:32px;">
           <a href="https://wa.me/5521992894227?text=Hello%20Anatoli%2C%20I%20am%20interested%20in%20the%20House%203%20Suites." target="_blank" class="btn-gold" data-en="Request Information" data-pt="Solicitar Informação">Request Information</a>
@@ -476,7 +486,7 @@ footer{background:var(--txt);color:var(--sand);padding:60px 56px 32px;}
   <div class="mw">
     <div class="ft-top">
       <div>
-        <div class="ft-brand"><img src="images/logo.jpg" alt="Anatoli" class="ft-logo"><span class="ft-name">Anatoli</span></div>
+        <div class="ft-brand"><img src="images/logo.png" alt="Anatoli" class="ft-logo"><span class="ft-name">Anatoli</span></div>
         <p class="ft-sub" data-en="Premium real estate developer in Brazil. Creating luxury gated communities for lifestyle investors. Registered Brazilian entity." data-pt="Incorporadora imobiliária premium no Brasil. Criando condomínios fechados de luxo. Entidade registrada no Brasil.">Premium real estate developer in Brazil. Creating luxury gated communities for lifestyle investors. Registered Brazilian entity.</p>
       </div>
       <div class="ft-col"><div class="ft-ct" data-en="The Villa" data-pt="A Villa">The Villa</div><a href="#villa" data-en="House — 3 Suites" data-pt="House — 3 Suites">House — 3 Suites</a><a href="#villa" data-en="Floor Plans" data-pt="Plantas">Floor Plans</a><a href="#villa" data-en="3D Walkthroughs" data-pt="Tours 3D">3D Walkthroughs</a></div>
@@ -502,6 +512,27 @@ function setLang(l,btn){document.querySelectorAll('[data-en]').forEach(el=>{cons
 function setMain(id,src){const el=document.getElementById(id);if(el)el.querySelector('img').src=src;}
 function showPlan(f,btn){document.querySelectorAll('.plan-box').forEach(p=>p.classList.remove('show'));document.querySelectorAll('.plan-btn').forEach(b=>b.classList.remove('on'));document.getElementById('plan-'+f).classList.add('show');btn.classList.add('on');}
 function handleForm(e){e.preventDefault();const n=document.getElementById('fn');n.style.color='var(--gold)';n.style.fontWeight='500';n.textContent='Thank you — we will be in touch within 24 hours.';}
+
+function openLightbox(src){
+  document.getElementById('lightbox-img').src=src;
+  document.getElementById('lightbox').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeLightbox(){
+  document.getElementById('lightbox').classList.remove('open');
+  document.body.style.overflow='';
+}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLightbox();});
+
 </script>
+
+<!-- LIGHTBOX -->
+<div class="lightbox-overlay" id="lightbox" onclick="closeLightbox()">
+  <div class="lightbox-inner" onclick="event.stopPropagation()">
+    <button class="lightbox-close" onclick="closeLightbox()">×</button>
+    <img id="lightbox-img" src="" alt="Floor Plan">
+  </div>
+</div>
+
 </body>
 </html>
